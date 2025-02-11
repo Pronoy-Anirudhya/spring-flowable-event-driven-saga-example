@@ -1,0 +1,793 @@
+2025-02-11T12:34:55.456+06:00  INFO 15952 --- [payment-service] [main] h.f.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 21.0.6 with PID 15952 (D:\Projects\Code\spring-flowable-microservice-event-driven-example\payment-service\target\classes started by anirudhya.sarker in D:\Projects\Code\spring-flowable-microservice-event-driven-example\payment-service)
+2025-02-11T12:34:55.458+06:00  INFO 15952 --- [payment-service] [main] h.f.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T12:34:56.142+06:00  INFO 15952 --- [payment-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-11T12:34:56.168+06:00  INFO 15952 --- [payment-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-11T12:34:56.168+06:00  INFO 15952 --- [payment-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-11T12:34:56.210+06:00  INFO 15952 --- [payment-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-11T12:34:56.210+06:00  INFO 15952 --- [payment-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 727 ms
+2025-02-11T12:34:56.452+06:00  INFO 15952 --- [payment-service] [main] o.f.s.b.app.AppEngineAutoConfiguration   : No deployment resources were found for autodeployment
+2025-02-11T12:34:56.520+06:00  INFO 15952 --- [payment-service] [main] o.f.s.b.ProcessEngineAutoConfiguration   : No deployment resources were found for autodeployment
+2025-02-11T12:34:56.591+06:00  INFO 15952 --- [payment-service] [main] o.f.s.b.c.CmmnEngineAutoConfiguration    : No deployment resources were found for autodeployment
+2025-02-11T12:34:56.624+06:00  INFO 15952 --- [payment-service] [main] o.f.s.b.dmn.DmnEngineAutoConfiguration   : No deployment resources were found for autodeployment
+2025-02-11T12:34:56.662+06:00  INFO 15952 --- [payment-service] [main] o.f.s.b.e.EventRegistryAutoConfiguration : No deployment resources were found for autodeployment
+2025-02-11T12:34:56.685+06:00  INFO 15952 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Found 5 Engine Configurators in total:
+2025-02-11T12:34:56.686+06:00  INFO 15952 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.engine.spring.configurator.SpringProcessEngineConfigurator (priority:50000)
+2025-02-11T12:34:56.686+06:00  INFO 15952 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.eventregistry.spring.configurator.SpringEventRegistryConfigurator (priority:100000)
+2025-02-11T12:34:56.687+06:00  INFO 15952 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.idm.spring.configurator.SpringIdmEngineConfigurator (priority:150000)
+2025-02-11T12:34:56.687+06:00  INFO 15952 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.dmn.spring.configurator.SpringDmnEngineConfigurator (priority:200000)
+2025-02-11T12:34:56.687+06:00  INFO 15952 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.cmmn.spring.configurator.SpringCmmnEngineConfigurator (priority:500000)
+2025-02-11T12:34:56.687+06:00  INFO 15952 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.engine.spring.configurator.SpringProcessEngineConfigurator (priority:50000)
+2025-02-11T12:34:56.704+06:00  INFO 15952 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.eventregistry.spring.configurator.SpringEventRegistryConfigurator (priority:100000)
+2025-02-11T12:34:56.704+06:00  INFO 15952 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.idm.spring.configurator.SpringIdmEngineConfigurator (priority:150000)
+2025-02-11T12:34:56.704+06:00  INFO 15952 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.dmn.spring.configurator.SpringDmnEngineConfigurator (priority:200000)
+2025-02-11T12:34:56.704+06:00  INFO 15952 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.cmmn.spring.configurator.SpringCmmnEngineConfigurator (priority:500000)
+2025-02-11T12:34:56.732+06:00  INFO 15952 --- [payment-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T12:34:56.820+06:00  INFO 15952 --- [payment-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:f85373ac-539e-4ab0-b6c5-f6ca8ce3545b user=SA
+2025-02-11T12:34:56.835+06:00  INFO 15952 --- [payment-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T12:34:57.374+06:00  INFO 15952 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.engine.spring.configurator.SpringProcessEngineConfigurator (priority:50000)
+2025-02-11T12:34:57.467+06:00  INFO 15952 --- [payment-service] [main] o.f.c.e.impl.db.CommonDbSchemaManager    : performing create on common with resource org/flowable/common/db/create/flowable.h2.create.common.sql
+2025-02-11T12:34:57.476+06:00  INFO 15952 --- [payment-service] [main] o.f.i.s.i.d.IdentityLinkDbSchemaManager  : performing create on identitylink with resource org/flowable/identitylink/service/db/create/flowable.h2.create.identitylink.sql
+2025-02-11T12:34:57.480+06:00  INFO 15952 --- [payment-service] [main] o.f.i.s.i.d.IdentityLinkDbSchemaManager  : performing create on identitylink.history with resource org/flowable/identitylink/service/db/create/flowable.h2.create.identitylink.history.sql
+2025-02-11T12:34:57.485+06:00  INFO 15952 --- [payment-service] [main] o.f.e.s.i.db.EntityLinkDbSchemaManager   : performing create on entitylink with resource org/flowable/entitylink/service/db/create/flowable.h2.create.entitylink.sql
+2025-02-11T12:34:57.489+06:00  INFO 15952 --- [payment-service] [main] o.f.e.s.i.db.EntityLinkDbSchemaManager   : performing create on entitylink.history with resource org/flowable/entitylink/service/db/create/flowable.h2.create.entitylink.history.sql
+2025-02-11T12:34:57.492+06:00  INFO 15952 --- [payment-service] [main] e.s.i.d.EventSubscriptionDbSchemaManager : performing create on eventsubscription with resource org/flowable/eventsubscription/service/db/create/flowable.h2.create.eventsubscription.sql
+2025-02-11T12:34:57.495+06:00  INFO 15952 --- [payment-service] [main] o.f.t.s.impl.db.TaskDbSchemaManager      : performing create on task with resource org/flowable/task/service/db/create/flowable.h2.create.task.sql
+2025-02-11T12:34:57.499+06:00  INFO 15952 --- [payment-service] [main] o.f.t.s.impl.db.TaskDbSchemaManager      : performing create on task.history with resource org/flowable/task/service/db/create/flowable.h2.create.task.history.sql
+2025-02-11T12:34:57.505+06:00  INFO 15952 --- [payment-service] [main] o.f.v.s.impl.db.VariableDbSchemaManager  : performing create on variable with resource org/flowable/variable/service/db/create/flowable.h2.create.variable.sql
+2025-02-11T12:34:57.516+06:00  INFO 15952 --- [payment-service] [main] o.f.v.s.impl.db.VariableDbSchemaManager  : performing create on variable.history with resource org/flowable/variable/service/db/create/flowable.h2.create.variable.history.sql
+2025-02-11T12:34:57.518+06:00  INFO 15952 --- [payment-service] [main] o.f.j.s.impl.db.JobDbSchemaManager       : performing create on job with resource org/flowable/job/service/db/create/flowable.h2.create.job.sql
+2025-02-11T12:34:57.541+06:00  INFO 15952 --- [payment-service] [main] o.f.b.s.impl.db.BatchDbSchemaManager     : performing create on batch with resource org/flowable/batch/service/db/create/flowable.h2.create.batch.sql
+2025-02-11T12:34:57.545+06:00  INFO 15952 --- [payment-service] [main] o.f.e.impl.db.ProcessDbSchemaManager     : performing create on engine with resource org/flowable/db/create/flowable.h2.create.engine.sql
+2025-02-11T12:34:57.576+06:00  INFO 15952 --- [payment-service] [main] o.f.e.impl.db.ProcessDbSchemaManager     : performing create on history with resource org/flowable/db/create/flowable.h2.create.history.sql
+2025-02-11T12:34:57.583+06:00  INFO 15952 --- [payment-service] [main] o.f.engine.impl.ProcessEngineImpl        : ProcessEngine default created
+2025-02-11T12:34:57.611+06:00  INFO 15952 --- [payment-service] [main] o.f.e.impl.cmd.ValidateV5EntitiesCmd     : Total of v5 deployments found: 0
+2025-02-11T12:34:57.614+06:00  INFO 15952 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.eventregistry.spring.configurator.SpringEventRegistryConfigurator (priority:100000)
+2025-02-11T12:34:57.668+06:00  INFO 15952 --- [payment-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-02-11T12:34:57.879+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.FLW_EV_DATABASECHANGELOG
+2025-02-11T12:34:57.928+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Reading from PUBLIC.FLW_EV_DATABASECHANGELOG
+2025-02-11T12:34:57.973+06:00  INFO 15952 --- [payment-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-02-11T12:34:57.974+06:00  INFO 15952 --- [payment-service] [main] liquibase.command                        : Using deploymentId: 9255697973
+2025-02-11T12:34:57.975+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Reading from PUBLIC.FLW_EV_DATABASECHANGELOG
+2025-02-11T12:34:58.003+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table FLW_EVENT_DEPLOYMENT created
+2025-02-11T12:34:58.004+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table FLW_EVENT_RESOURCE created
+2025-02-11T12:34:58.012+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table FLW_EVENT_DEFINITION created
+2025-02-11T12:34:58.013+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_EVENT_DEF_UNIQ created
+2025-02-11T12:34:58.015+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table FLW_CHANNEL_DEFINITION created
+2025-02-11T12:34:58.016+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_CHANNEL_DEF_UNIQ created
+2025-02-11T12:34:58.017+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/eventregistry/db/liquibase/flowable-eventregistry-db-changelog.xml::1::flowable ran successfully in 17ms
+2025-02-11T12:34:58.027+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns TYPE_(varchar(255)) added to FLW_CHANNEL_DEFINITION
+2025-02-11T12:34:58.029+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns IMPLEMENTATION_(varchar(255)) added to FLW_CHANNEL_DEFINITION
+2025-02-11T12:34:58.030+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/eventregistry/db/liquibase/flowable-eventregistry-db-changelog.xml::2::flowable ran successfully in 10ms
+2025-02-11T12:34:58.035+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Set Channel Definition type and implementation columns
+2025-02-11T12:34:58.036+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/eventregistry/db/liquibase/flowable-eventregistry-db-changelog.xml::3::flowable ran successfully in 5ms
+2025-02-11T12:34:58.040+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : UPDATE SUMMARY
+2025-02-11T12:34:58.041+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Run:                          3
+2025-02-11T12:34:58.041+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Previously run:               0
+2025-02-11T12:34:58.041+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Filtered out:                 0
+2025-02-11T12:34:58.042+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : -------------------------------
+2025-02-11T12:34:58.042+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Total change sets:            3
+2025-02-11T12:34:58.042+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Update summary generated
+2025-02-11T12:34:58.044+06:00  INFO 15952 --- [payment-service] [main] liquibase.command                        : Update command completed successfully.
+2025-02-11T12:34:58.046+06:00  INFO 15952 --- [payment-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-02-11T12:34:58.046+06:00  INFO 15952 --- [payment-service] [main] liquibase.command                        : Command execution complete
+2025-02-11T12:34:58.047+06:00  INFO 15952 --- [payment-service] [main] o.f.e.impl.EventRegistryEngineImpl       : EventRegistryEngine default created
+2025-02-11T12:34:58.047+06:00  INFO 15952 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.idm.spring.configurator.SpringIdmEngineConfigurator (priority:150000)
+2025-02-11T12:34:58.051+06:00  INFO 15952 --- [payment-service] [main] o.f.i.engine.impl.db.IdmDbSchemaManager  : performing create on identity with resource org/flowable/idm/db/create/flowable.h2.create.identity.sql
+2025-02-11T12:34:58.056+06:00  INFO 15952 --- [payment-service] [main] o.f.idm.engine.impl.IdmEngineImpl        : IdmEngine default created
+2025-02-11T12:34:58.057+06:00  INFO 15952 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.dmn.spring.configurator.SpringDmnEngineConfigurator (priority:200000)
+2025-02-11T12:34:58.065+06:00  INFO 15952 --- [payment-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-02-11T12:34:58.081+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.ACT_DMN_DATABASECHANGELOG
+2025-02-11T12:34:58.083+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_DMN_DATABASECHANGELOG
+2025-02-11T12:34:58.099+06:00  INFO 15952 --- [payment-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-02-11T12:34:58.100+06:00  INFO 15952 --- [payment-service] [main] liquibase.command                        : Using deploymentId: 9255698100
+2025-02-11T12:34:58.100+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_DMN_DATABASECHANGELOG
+2025-02-11T12:34:58.112+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table ACT_DMN_DEPLOYMENT created
+2025-02-11T12:34:58.113+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table ACT_DMN_DEPLOYMENT_RESOURCE created
+2025-02-11T12:34:58.114+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table ACT_DMN_DECISION_TABLE created
+2025-02-11T12:34:58.115+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::1::activiti ran successfully in 4ms
+2025-02-11T12:34:58.118+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table ACT_DMN_HI_DECISION_EXECUTION created
+2025-02-11T12:34:58.118+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::2::flowable ran successfully in 1ms
+2025-02-11T12:34:58.123+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns SCOPE_TYPE_(varchar(255)) added to ACT_DMN_HI_DECISION_EXECUTION
+2025-02-11T12:34:58.124+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::3::flowable ran successfully in 4ms
+2025-02-11T12:34:58.128+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Column ACT_DMN_DECISION_TABLE.PARENT_DEPLOYMENT_ID_ dropped
+2025-02-11T12:34:58.128+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::4::flowable ran successfully in 2ms
+2025-02-11T12:34:58.131+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_DEC_TBL_UNIQ created
+2025-02-11T12:34:58.131+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::6::flowable ran successfully in 1ms
+2025-02-11T12:34:58.133+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_DEC_TBL_UNIQ dropped from table ACT_DMN_DECISION_TABLE
+2025-02-11T12:34:58.134+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table ACT_DMN_DECISION_TABLE renamed to ACT_DMN_DECISION
+2025-02-11T12:34:58.135+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_DMN_DEC_UNIQ created
+2025-02-11T12:34:58.135+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::7::flowable ran successfully in 2ms
+2025-02-11T12:34:58.139+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns DECISION_TYPE_(varchar(255)) added to ACT_DMN_DECISION
+2025-02-11T12:34:58.139+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::8::flowable ran successfully in 3ms
+2025-02-11T12:34:58.139+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_DMN_INSTANCE_ID created
+2025-02-11T12:34:58.139+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::9::flowable ran successfully in 0ms
+2025-02-11T12:34:58.139+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : UPDATE SUMMARY
+2025-02-11T12:34:58.139+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Run:                          8
+2025-02-11T12:34:58.139+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Previously run:               0
+2025-02-11T12:34:58.139+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Filtered out:                 1
+2025-02-11T12:34:58.139+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : -------------------------------
+2025-02-11T12:34:58.139+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Total change sets:            9
+2025-02-11T12:34:58.139+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : FILTERED CHANGE SETS SUMMARY
+2025-02-11T12:34:58.139+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : DBMS mismatch:                1
+2025-02-11T12:34:58.139+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Update summary generated
+2025-02-11T12:34:58.152+06:00  INFO 15952 --- [payment-service] [main] liquibase.command                        : Update command completed successfully.
+2025-02-11T12:34:58.152+06:00  INFO 15952 --- [payment-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-02-11T12:34:58.152+06:00  INFO 15952 --- [payment-service] [main] liquibase.command                        : Command execution complete
+2025-02-11T12:34:58.152+06:00  INFO 15952 --- [payment-service] [main] o.f.dmn.engine.impl.DmnEngineImpl        : DmnEngine default created
+2025-02-11T12:34:58.152+06:00  INFO 15952 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.cmmn.spring.configurator.SpringCmmnEngineConfigurator (priority:500000)
+2025-02-11T12:34:58.210+06:00  INFO 15952 --- [payment-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-02-11T12:34:58.250+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.ACT_CMMN_DATABASECHANGELOG
+2025-02-11T12:34:58.259+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_CMMN_DATABASECHANGELOG
+2025-02-11T12:34:58.286+06:00  INFO 15952 --- [payment-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-02-11T12:34:58.287+06:00  INFO 15952 --- [payment-service] [main] liquibase.command                        : Using deploymentId: 9255698287
+2025-02-11T12:34:58.287+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_CMMN_DATABASECHANGELOG
+2025-02-11T12:34:58.307+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_DEPLOYMENT created
+2025-02-11T12:34:58.307+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_DEPLOYMENT_RESOURCE created
+2025-02-11T12:34:58.309+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_DEPLOYMENT_RESOURCE (DEPLOYMENT_ID_)
+2025-02-11T12:34:58.310+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_CMMN_RSRC_DPL created
+2025-02-11T12:34:58.311+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_CASEDEF created
+2025-02-11T12:34:58.312+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_CASEDEF (DEPLOYMENT_ID_)
+2025-02-11T12:34:58.312+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_DEF_DPLY created
+2025-02-11T12:34:58.314+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_RU_CASE_INST created
+2025-02-11T12:34:58.314+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_CASE_INST (CASE_DEF_ID_)
+2025-02-11T12:34:58.315+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_INST_CASE_DEF created
+2025-02-11T12:34:58.316+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_INST_PARENT created
+2025-02-11T12:34:58.317+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_RU_PLAN_ITEM_INST created
+2025-02-11T12:34:58.318+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_PLAN_ITEM_INST (CASE_DEF_ID_)
+2025-02-11T12:34:58.318+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_PLAN_ITEM_CASE_DEF created
+2025-02-11T12:34:58.319+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_PLAN_ITEM_INST (CASE_INST_ID_)
+2025-02-11T12:34:58.319+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_PLAN_ITEM_CASE_INST created
+2025-02-11T12:34:58.320+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_RU_SENTRY_PART_INST created
+2025-02-11T12:34:58.322+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_SENTRY_PART_INST (CASE_DEF_ID_)
+2025-02-11T12:34:58.322+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_SENTRY_CASE_DEF created
+2025-02-11T12:34:58.323+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_SENTRY_PART_INST (CASE_INST_ID_)
+2025-02-11T12:34:58.323+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_SENTRY_CASE_INST created
+2025-02-11T12:34:58.324+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_SENTRY_PART_INST (PLAN_ITEM_INST_ID_)
+2025-02-11T12:34:58.325+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_SENTRY_PLAN_ITEM created
+2025-02-11T12:34:58.325+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_RU_MIL_INST created
+2025-02-11T12:34:58.327+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_MIL_INST (CASE_DEF_ID_)
+2025-02-11T12:34:58.328+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_MIL_CASE_DEF created
+2025-02-11T12:34:58.329+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_MIL_INST (CASE_INST_ID_)
+2025-02-11T12:34:58.331+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_MIL_CASE_INST created
+2025-02-11T12:34:58.332+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_HI_CASE_INST created
+2025-02-11T12:34:58.333+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_HI_MIL_INST created
+2025-02-11T12:34:58.334+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::1::flowable ran successfully in 29ms
+2025-02-11T12:34:58.339+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns DGRM_RESOURCE_NAME_(varchar(4000)),HAS_START_FORM_KEY_(boolean) added to ACT_CMMN_CASEDEF
+2025-02-11T12:34:58.340+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns GENERATED_(boolean) added to ACT_CMMN_DEPLOYMENT_RESOURCE
+2025-02-11T12:34:58.343+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns LOCK_TIME_(datetime) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:34:58.346+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns ITEM_DEFINITION_ID_(varchar(255)),ITEM_DEFINITION_TYPE_(varchar(255)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:34:58.346+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::2::flowable ran successfully in 10ms
+2025-02-11T12:34:58.348+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns IS_COMPLETEABLE_(boolean) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:34:58.350+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns IS_COMPLETEABLE_(boolean) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:34:58.351+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_PLAN_ITEM_STAGE_INST created
+2025-02-11T12:34:58.353+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns IS_COUNT_ENABLED_(boolean) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:34:58.355+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns VAR_COUNT_(integer) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:34:58.357+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns SENTRY_PART_INST_COUNT_(integer) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:34:58.357+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::3::flowable ran successfully in 10ms
+2025-02-11T12:34:58.361+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_HI_PLAN_ITEM_INST created
+2025-02-11T12:34:58.363+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns TENANT_ID_(varchar(255)) added to ACT_CMMN_RU_MIL_INST
+2025-02-11T12:34:58.364+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns TENANT_ID_(varchar(255)) added to ACT_CMMN_HI_MIL_INST
+2025-02-11T12:34:58.364+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::4::flowable ran successfully in 5ms
+2025-02-11T12:34:58.366+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_DEF_UNIQ created
+2025-02-11T12:34:58.366+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::6::flowable ran successfully in 1ms
+2025-02-11T12:34:58.369+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Column ACT_CMMN_RU_PLAN_ITEM_INST.START_TIME_ renamed to CREATE_TIME_
+2025-02-11T12:34:58.369+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Column ACT_CMMN_HI_PLAN_ITEM_INST.CREATED_TIME_ renamed to CREATE_TIME_
+2025-02-11T12:34:58.387+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns LAST_AVAILABLE_TIME_(datetime(3)),LAST_ENABLED_TIME_(datetime(3)),LAST_DISABLED_TIME_(datetime(3)),LAST_STARTED_TIME_(datetime(3)),LAST_SUSPENDED_TIME_(datetime(3)),COMPLETED_TIME_(datetime(3)),OCCURRED_TIME_(datetime(3)),TERMINATED_TIME_(datetime(3)),EXIT_TIME_(datetime(3)),ENDED_TIME_(datetime(3)),ENTRY_CRITERION_ID_(varchar(255)),EXIT_CRITERION_ID_(varchar(255)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:34:58.390+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns ENTRY_CRITERION_ID_(varchar(255)),EXIT_CRITERION_ID_(varchar(255)) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:34:58.390+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::7::flowable ran successfully in 22ms
+2025-02-11T12:34:58.392+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns SHOW_IN_OVERVIEW_(boolean) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:34:58.394+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::8::flowable ran successfully in 3ms
+2025-02-11T12:34:58.396+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns EXTRA_VALUE_(varchar(255)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:34:58.398+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns EXTRA_VALUE_(varchar(255)) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:34:58.398+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::9::flowable ran successfully in 4ms
+2025-02-11T12:34:58.401+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns REFERENCE_ID_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:34:58.404+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns REFERENCE_TYPE_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:34:58.404+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_INST_REF_ID_ created
+2025-02-11T12:34:58.405+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns REFERENCE_ID_(varchar(255)) added to ACT_CMMN_HI_CASE_INST
+2025-02-11T12:34:58.407+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns REFERENCE_TYPE_(varchar(255)) added to ACT_CMMN_HI_CASE_INST
+2025-02-11T12:34:58.407+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::10::flowable ran successfully in 7ms
+2025-02-11T12:34:58.410+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns DERIVED_CASE_DEF_ID_(varchar(255)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:34:58.412+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns DERIVED_CASE_DEF_ID_(varchar(255)) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:34:58.412+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::11::flowable ran successfully in 3ms
+2025-02-11T12:34:58.415+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns LOCK_OWNER_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:34:58.416+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::12::flowable ran successfully in 3ms
+2025-02-11T12:34:58.419+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns LAST_UNAVAILABLE_TIME_(datetime(3)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:34:58.421+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns LAST_UNAVAILABLE_TIME_(datetime(3)) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:34:58.421+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::13::flowable ran successfully in 4ms
+2025-02-11T12:34:58.426+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns LAST_REACTIVATION_TIME_(datetime(3)),LAST_REACTIVATION_USER_ID_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:34:58.429+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns LAST_REACTIVATION_TIME_(datetime(3)),LAST_REACTIVATION_USER_ID_(varchar(255)) added to ACT_CMMN_HI_CASE_INST
+2025-02-11T12:34:58.429+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::14::flowable ran successfully in 6ms
+2025-02-11T12:34:58.432+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns BUSINESS_STATUS_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:34:58.433+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Columns BUSINESS_STATUS_(varchar(255)) added to ACT_CMMN_HI_CASE_INST
+2025-02-11T12:34:58.433+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::16::flowable ran successfully in 3ms
+2025-02-11T12:34:58.435+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_HI_CASE_INST_END created
+2025-02-11T12:34:58.436+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::17::flowable ran successfully in 0ms
+2025-02-11T12:34:58.437+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : UPDATE SUMMARY
+2025-02-11T12:34:58.437+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Run:                         15
+2025-02-11T12:34:58.438+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Previously run:               0
+2025-02-11T12:34:58.438+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Filtered out:                 2
+2025-02-11T12:34:58.438+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : -------------------------------
+2025-02-11T12:34:58.438+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Total change sets:           17
+2025-02-11T12:34:58.438+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : FILTERED CHANGE SETS SUMMARY
+2025-02-11T12:34:58.438+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : DBMS mismatch:                2
+2025-02-11T12:34:58.439+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Update summary generated
+2025-02-11T12:34:58.439+06:00  INFO 15952 --- [payment-service] [main] liquibase.command                        : Update command completed successfully.
+2025-02-11T12:34:58.440+06:00  INFO 15952 --- [payment-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-02-11T12:34:58.440+06:00  INFO 15952 --- [payment-service] [main] liquibase.command                        : Command execution complete
+2025-02-11T12:34:58.441+06:00  INFO 15952 --- [payment-service] [main] o.f.cmmn.engine.impl.CmmnEngineImpl      : CmmnEngine default created
+2025-02-11T12:34:58.444+06:00  INFO 15952 --- [payment-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-02-11T12:34:58.464+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.ACT_APP_DATABASECHANGELOG
+2025-02-11T12:34:58.467+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_APP_DATABASECHANGELOG
+2025-02-11T12:34:58.486+06:00  INFO 15952 --- [payment-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-02-11T12:34:58.486+06:00  INFO 15952 --- [payment-service] [main] liquibase.command                        : Using deploymentId: 9255698486
+2025-02-11T12:34:58.487+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_APP_DATABASECHANGELOG
+2025-02-11T12:34:58.499+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table ACT_APP_DEPLOYMENT created
+2025-02-11T12:34:58.500+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table ACT_APP_DEPLOYMENT_RESOURCE created
+2025-02-11T12:34:58.502+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_APP_DEPLOYMENT_RESOURCE (DEPLOYMENT_ID_)
+2025-02-11T12:34:58.503+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_APP_RSRC_DPL created
+2025-02-11T12:34:58.505+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Table ACT_APP_APPDEF created
+2025-02-11T12:34:58.506+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_APP_APPDEF (DEPLOYMENT_ID_)
+2025-02-11T12:34:58.507+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_APP_DEF_DPLY created
+2025-02-11T12:34:58.508+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/app/db/liquibase/flowable-app-db-changelog.xml::1::flowable ran successfully in 12ms
+2025-02-11T12:34:58.511+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_APP_DEF_UNIQ created
+2025-02-11T12:34:58.512+06:00  INFO 15952 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/app/db/liquibase/flowable-app-db-changelog.xml::3::flowable ran successfully in 2ms
+2025-02-11T12:34:58.515+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : UPDATE SUMMARY
+2025-02-11T12:34:58.515+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Run:                          2
+2025-02-11T12:34:58.515+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Previously run:               0
+2025-02-11T12:34:58.516+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Filtered out:                 1
+2025-02-11T12:34:58.516+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : -------------------------------
+2025-02-11T12:34:58.516+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Total change sets:            3
+2025-02-11T12:34:58.516+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : FILTERED CHANGE SETS SUMMARY
+2025-02-11T12:34:58.516+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : DBMS mismatch:                1
+2025-02-11T12:34:58.517+06:00  INFO 15952 --- [payment-service] [main] liquibase.util                           : Update summary generated
+2025-02-11T12:34:58.517+06:00  INFO 15952 --- [payment-service] [main] liquibase.command                        : Update command completed successfully.
+2025-02-11T12:34:58.518+06:00  INFO 15952 --- [payment-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-02-11T12:34:58.518+06:00  INFO 15952 --- [payment-service] [main] liquibase.command                        : Command execution complete
+2025-02-11T12:34:58.519+06:00  INFO 15952 --- [payment-service] [main] o.f.app.engine.impl.AppEngineImpl        : AppEngine default created
+2025-02-11T12:34:58.673+06:00  INFO 15952 --- [payment-service] [main] o.f.j.s.i.a.AbstractAsyncExecutor        : Starting up the async job executor [org.flowable.spring.job.service.SpringAsyncExecutor] for engine cmmn
+2025-02-11T12:34:58.680+06:00  INFO 15952 --- [payment-service] [Thread-3] o.f.j.s.i.a.ResetExpiredJobsRunnable     : starting to reset expired jobs for engine cmmn
+2025-02-11T12:34:58.681+06:00  INFO 15952 --- [payment-service] [main] o.f.j.s.i.a.AbstractAsyncExecutor        : Starting up the async job executor [org.flowable.spring.job.service.SpringAsyncExecutor] for engine bpmn
+2025-02-11T12:34:58.681+06:00  INFO 15952 --- [payment-service] [Thread-2] o.f.j.s.i.a.AcquireTimerJobsRunnable     : starting to acquire async jobs due for engine cmmn
+2025-02-11T12:34:58.681+06:00  INFO 15952 --- [payment-service] [Thread-1] o.f.j.s.i.a.AcquireAsyncJobsDueRunnable  : starting to acquire async jobs due for engine cmmn
+2025-02-11T12:34:58.687+06:00  INFO 15952 --- [payment-service] [Thread-4] o.f.j.s.i.a.AcquireAsyncJobsDueRunnable  : starting to acquire async jobs due for engine bpmn
+2025-02-11T12:34:58.688+06:00  INFO 15952 --- [payment-service] [Thread-6] o.f.j.s.i.a.ResetExpiredJobsRunnable     : starting to reset expired jobs for engine bpmn
+2025-02-11T12:34:58.688+06:00  INFO 15952 --- [payment-service] [Thread-5] o.f.j.s.i.a.AcquireTimerJobsRunnable     : starting to acquire async jobs due for engine bpmn
+2025-02-11T12:34:58.711+06:00  WARN 15952 --- [payment-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-02-11T12:34:58.715+06:00  INFO 15952 --- [payment-service] [main] o.f.j.s.i.a.AbstractAsyncExecutor        : Shutting down the async job executor [org.flowable.spring.job.service.SpringAsyncExecutor] for engine cmmn
+2025-02-11T12:34:58.716+06:00  INFO 15952 --- [payment-service] [flowable-cmmn-acquire-async-jobs] o.f.j.s.i.a.AcquireAsyncJobsDueRunnable  : stopped async job due acquisition for engine cmmn
+2025-02-11T12:34:58.716+06:00  INFO 15952 --- [payment-service] [flowable-cmmn-reset-expired-jobs] o.f.j.s.i.a.ResetExpiredJobsRunnable     : stopped resetting expired jobs for engine cmmn
+2025-02-11T12:34:58.716+06:00  INFO 15952 --- [payment-service] [flowable-cmmn-acquire-timer-jobs] o.f.j.s.i.a.AcquireTimerJobsRunnable     : stopped async job due acquisition for engine cmmn
+2025-02-11T12:34:58.720+06:00  INFO 15952 --- [payment-service] [main] o.f.j.s.i.a.AbstractAsyncExecutor        : Shutting down the async job executor [org.flowable.spring.job.service.SpringAsyncExecutor] for engine bpmn
+2025-02-11T12:34:58.721+06:00  INFO 15952 --- [payment-service] [flowable-bpmn-acquire-timer-jobs] o.f.j.s.i.a.AcquireTimerJobsRunnable     : stopped async job due acquisition for engine bpmn
+2025-02-11T12:34:58.721+06:00  INFO 15952 --- [payment-service] [flowable-bpmn-acquire-async-jobs] o.f.j.s.i.a.AcquireAsyncJobsDueRunnable  : stopped async job due acquisition for engine bpmn
+2025-02-11T12:34:58.721+06:00  INFO 15952 --- [payment-service] [flowable-bpmn-reset-expired-jobs] o.f.j.s.i.a.ResetExpiredJobsRunnable     : stopped resetting expired jobs for engine bpmn
+2025-02-11T12:34:58.727+06:00  INFO 15952 --- [payment-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T12:34:58.728+06:00  INFO 15952 --- [payment-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T12:34:58.737+06:00  INFO 15952 --- [payment-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-02-11T12:34:58.749+06:00 ERROR 15952 --- [payment-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-02-11T12:37:20.242+06:00  INFO 7224 --- [payment-service] [main] h.f.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 21.0.6 with PID 7224 (D:\Projects\Code\spring-flowable-microservice-event-driven-example\payment-service\target\classes started by anirudhya.sarker in D:\Projects\Code\spring-flowable-microservice-event-driven-example\payment-service)
+2025-02-11T12:37:20.242+06:00  INFO 7224 --- [payment-service] [main] h.f.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T12:37:21.162+06:00  INFO 7224 --- [payment-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-02-11T12:37:21.175+06:00  INFO 7224 --- [payment-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-11T12:37:21.176+06:00  INFO 7224 --- [payment-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-11T12:37:21.232+06:00  INFO 7224 --- [payment-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-11T12:37:21.233+06:00  INFO 7224 --- [payment-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 954 ms
+2025-02-11T12:37:21.552+06:00  INFO 7224 --- [payment-service] [main] o.f.s.b.app.AppEngineAutoConfiguration   : No deployment resources were found for autodeployment
+2025-02-11T12:37:21.631+06:00  INFO 7224 --- [payment-service] [main] o.f.s.b.ProcessEngineAutoConfiguration   : No deployment resources were found for autodeployment
+2025-02-11T12:37:21.727+06:00  INFO 7224 --- [payment-service] [main] o.f.s.b.c.CmmnEngineAutoConfiguration    : No deployment resources were found for autodeployment
+2025-02-11T12:37:21.779+06:00  INFO 7224 --- [payment-service] [main] o.f.s.b.dmn.DmnEngineAutoConfiguration   : No deployment resources were found for autodeployment
+2025-02-11T12:37:21.831+06:00  INFO 7224 --- [payment-service] [main] o.f.s.b.e.EventRegistryAutoConfiguration : No deployment resources were found for autodeployment
+2025-02-11T12:37:21.860+06:00  INFO 7224 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Found 5 Engine Configurators in total:
+2025-02-11T12:37:21.862+06:00  INFO 7224 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.engine.spring.configurator.SpringProcessEngineConfigurator (priority:50000)
+2025-02-11T12:37:21.862+06:00  INFO 7224 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.eventregistry.spring.configurator.SpringEventRegistryConfigurator (priority:100000)
+2025-02-11T12:37:21.862+06:00  INFO 7224 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.idm.spring.configurator.SpringIdmEngineConfigurator (priority:150000)
+2025-02-11T12:37:21.862+06:00  INFO 7224 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.dmn.spring.configurator.SpringDmnEngineConfigurator (priority:200000)
+2025-02-11T12:37:21.862+06:00  INFO 7224 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.cmmn.spring.configurator.SpringCmmnEngineConfigurator (priority:500000)
+2025-02-11T12:37:21.863+06:00  INFO 7224 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.engine.spring.configurator.SpringProcessEngineConfigurator (priority:50000)
+2025-02-11T12:37:21.892+06:00  INFO 7224 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.eventregistry.spring.configurator.SpringEventRegistryConfigurator (priority:100000)
+2025-02-11T12:37:21.896+06:00  INFO 7224 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.idm.spring.configurator.SpringIdmEngineConfigurator (priority:150000)
+2025-02-11T12:37:21.901+06:00  INFO 7224 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.dmn.spring.configurator.SpringDmnEngineConfigurator (priority:200000)
+2025-02-11T12:37:21.903+06:00  INFO 7224 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.cmmn.spring.configurator.SpringCmmnEngineConfigurator (priority:500000)
+2025-02-11T12:37:21.926+06:00  INFO 7224 --- [payment-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T12:37:22.072+06:00  INFO 7224 --- [payment-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:2efac6d5-1a17-43b3-8464-cae0abb27c34 user=SA
+2025-02-11T12:37:22.075+06:00  INFO 7224 --- [payment-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T12:37:22.765+06:00  INFO 7224 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.engine.spring.configurator.SpringProcessEngineConfigurator (priority:50000)
+2025-02-11T12:37:22.840+06:00  INFO 7224 --- [payment-service] [main] o.f.c.e.impl.db.CommonDbSchemaManager    : performing create on common with resource org/flowable/common/db/create/flowable.h2.create.common.sql
+2025-02-11T12:37:22.865+06:00  INFO 7224 --- [payment-service] [main] o.f.i.s.i.d.IdentityLinkDbSchemaManager  : performing create on identitylink with resource org/flowable/identitylink/service/db/create/flowable.h2.create.identitylink.sql
+2025-02-11T12:37:22.868+06:00  INFO 7224 --- [payment-service] [main] o.f.i.s.i.d.IdentityLinkDbSchemaManager  : performing create on identitylink.history with resource org/flowable/identitylink/service/db/create/flowable.h2.create.identitylink.history.sql
+2025-02-11T12:37:22.872+06:00  INFO 7224 --- [payment-service] [main] o.f.e.s.i.db.EntityLinkDbSchemaManager   : performing create on entitylink with resource org/flowable/entitylink/service/db/create/flowable.h2.create.entitylink.sql
+2025-02-11T12:37:22.872+06:00  INFO 7224 --- [payment-service] [main] o.f.e.s.i.db.EntityLinkDbSchemaManager   : performing create on entitylink.history with resource org/flowable/entitylink/service/db/create/flowable.h2.create.entitylink.history.sql
+2025-02-11T12:37:22.872+06:00  INFO 7224 --- [payment-service] [main] e.s.i.d.EventSubscriptionDbSchemaManager : performing create on eventsubscription with resource org/flowable/eventsubscription/service/db/create/flowable.h2.create.eventsubscription.sql
+2025-02-11T12:37:22.872+06:00  INFO 7224 --- [payment-service] [main] o.f.t.s.impl.db.TaskDbSchemaManager      : performing create on task with resource org/flowable/task/service/db/create/flowable.h2.create.task.sql
+2025-02-11T12:37:22.888+06:00  INFO 7224 --- [payment-service] [main] o.f.t.s.impl.db.TaskDbSchemaManager      : performing create on task.history with resource org/flowable/task/service/db/create/flowable.h2.create.task.history.sql
+2025-02-11T12:37:22.890+06:00  INFO 7224 --- [payment-service] [main] o.f.v.s.impl.db.VariableDbSchemaManager  : performing create on variable with resource org/flowable/variable/service/db/create/flowable.h2.create.variable.sql
+2025-02-11T12:37:22.904+06:00  INFO 7224 --- [payment-service] [main] o.f.v.s.impl.db.VariableDbSchemaManager  : performing create on variable.history with resource org/flowable/variable/service/db/create/flowable.h2.create.variable.history.sql
+2025-02-11T12:37:22.906+06:00  INFO 7224 --- [payment-service] [main] o.f.j.s.impl.db.JobDbSchemaManager       : performing create on job with resource org/flowable/job/service/db/create/flowable.h2.create.job.sql
+2025-02-11T12:37:22.932+06:00  INFO 7224 --- [payment-service] [main] o.f.b.s.impl.db.BatchDbSchemaManager     : performing create on batch with resource org/flowable/batch/service/db/create/flowable.h2.create.batch.sql
+2025-02-11T12:37:22.935+06:00  INFO 7224 --- [payment-service] [main] o.f.e.impl.db.ProcessDbSchemaManager     : performing create on engine with resource org/flowable/db/create/flowable.h2.create.engine.sql
+2025-02-11T12:37:22.964+06:00  INFO 7224 --- [payment-service] [main] o.f.e.impl.db.ProcessDbSchemaManager     : performing create on history with resource org/flowable/db/create/flowable.h2.create.history.sql
+2025-02-11T12:37:22.976+06:00  INFO 7224 --- [payment-service] [main] o.f.engine.impl.ProcessEngineImpl        : ProcessEngine default created
+2025-02-11T12:37:23.004+06:00  INFO 7224 --- [payment-service] [main] o.f.e.impl.cmd.ValidateV5EntitiesCmd     : Total of v5 deployments found: 0
+2025-02-11T12:37:23.007+06:00  INFO 7224 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.eventregistry.spring.configurator.SpringEventRegistryConfigurator (priority:100000)
+2025-02-11T12:37:23.064+06:00  INFO 7224 --- [payment-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-02-11T12:37:23.290+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.FLW_EV_DATABASECHANGELOG
+2025-02-11T12:37:23.339+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Reading from PUBLIC.FLW_EV_DATABASECHANGELOG
+2025-02-11T12:37:23.383+06:00  INFO 7224 --- [payment-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-02-11T12:37:23.384+06:00  INFO 7224 --- [payment-service] [main] liquibase.command                        : Using deploymentId: 9255843384
+2025-02-11T12:37:23.385+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Reading from PUBLIC.FLW_EV_DATABASECHANGELOG
+2025-02-11T12:37:23.406+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table FLW_EVENT_DEPLOYMENT created
+2025-02-11T12:37:23.406+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table FLW_EVENT_RESOURCE created
+2025-02-11T12:37:23.406+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table FLW_EVENT_DEFINITION created
+2025-02-11T12:37:23.406+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_EVENT_DEF_UNIQ created
+2025-02-11T12:37:23.406+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table FLW_CHANNEL_DEFINITION created
+2025-02-11T12:37:23.406+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_CHANNEL_DEF_UNIQ created
+2025-02-11T12:37:23.406+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/eventregistry/db/liquibase/flowable-eventregistry-db-changelog.xml::1::flowable ran successfully in 0ms
+2025-02-11T12:37:23.430+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns TYPE_(varchar(255)) added to FLW_CHANNEL_DEFINITION
+2025-02-11T12:37:23.433+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns IMPLEMENTATION_(varchar(255)) added to FLW_CHANNEL_DEFINITION
+2025-02-11T12:37:23.433+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/eventregistry/db/liquibase/flowable-eventregistry-db-changelog.xml::2::flowable ran successfully in 9ms
+2025-02-11T12:37:23.439+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Set Channel Definition type and implementation columns
+2025-02-11T12:37:23.440+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/eventregistry/db/liquibase/flowable-eventregistry-db-changelog.xml::3::flowable ran successfully in 6ms
+2025-02-11T12:37:23.444+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : UPDATE SUMMARY
+2025-02-11T12:37:23.444+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Run:                          3
+2025-02-11T12:37:23.444+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Previously run:               0
+2025-02-11T12:37:23.444+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Filtered out:                 0
+2025-02-11T12:37:23.444+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : -------------------------------
+2025-02-11T12:37:23.444+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Total change sets:            3
+2025-02-11T12:37:23.444+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Update summary generated
+2025-02-11T12:37:23.444+06:00  INFO 7224 --- [payment-service] [main] liquibase.command                        : Update command completed successfully.
+2025-02-11T12:37:23.444+06:00  INFO 7224 --- [payment-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-02-11T12:37:23.444+06:00  INFO 7224 --- [payment-service] [main] liquibase.command                        : Command execution complete
+2025-02-11T12:37:23.444+06:00  INFO 7224 --- [payment-service] [main] o.f.e.impl.EventRegistryEngineImpl       : EventRegistryEngine default created
+2025-02-11T12:37:23.444+06:00  INFO 7224 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.idm.spring.configurator.SpringIdmEngineConfigurator (priority:150000)
+2025-02-11T12:37:23.456+06:00  INFO 7224 --- [payment-service] [main] o.f.i.engine.impl.db.IdmDbSchemaManager  : performing create on identity with resource org/flowable/idm/db/create/flowable.h2.create.identity.sql
+2025-02-11T12:37:23.456+06:00  INFO 7224 --- [payment-service] [main] o.f.idm.engine.impl.IdmEngineImpl        : IdmEngine default created
+2025-02-11T12:37:23.456+06:00  INFO 7224 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.dmn.spring.configurator.SpringDmnEngineConfigurator (priority:200000)
+2025-02-11T12:37:23.469+06:00  INFO 7224 --- [payment-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-02-11T12:37:23.486+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.ACT_DMN_DATABASECHANGELOG
+2025-02-11T12:37:23.489+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_DMN_DATABASECHANGELOG
+2025-02-11T12:37:23.503+06:00  INFO 7224 --- [payment-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-02-11T12:37:23.503+06:00  INFO 7224 --- [payment-service] [main] liquibase.command                        : Using deploymentId: 9255843503
+2025-02-11T12:37:23.503+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_DMN_DATABASECHANGELOG
+2025-02-11T12:37:23.509+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table ACT_DMN_DEPLOYMENT created
+2025-02-11T12:37:23.509+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table ACT_DMN_DEPLOYMENT_RESOURCE created
+2025-02-11T12:37:23.509+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table ACT_DMN_DECISION_TABLE created
+2025-02-11T12:37:23.509+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::1::activiti ran successfully in 0ms
+2025-02-11T12:37:23.509+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table ACT_DMN_HI_DECISION_EXECUTION created
+2025-02-11T12:37:23.509+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::2::flowable ran successfully in 0ms
+2025-02-11T12:37:23.528+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns SCOPE_TYPE_(varchar(255)) added to ACT_DMN_HI_DECISION_EXECUTION
+2025-02-11T12:37:23.529+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::3::flowable ran successfully in 8ms
+2025-02-11T12:37:23.533+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Column ACT_DMN_DECISION_TABLE.PARENT_DEPLOYMENT_ID_ dropped
+2025-02-11T12:37:23.533+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::4::flowable ran successfully in 2ms
+2025-02-11T12:37:23.536+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_DEC_TBL_UNIQ created
+2025-02-11T12:37:23.536+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::6::flowable ran successfully in 1ms
+2025-02-11T12:37:23.538+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_DEC_TBL_UNIQ dropped from table ACT_DMN_DECISION_TABLE
+2025-02-11T12:37:23.539+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table ACT_DMN_DECISION_TABLE renamed to ACT_DMN_DECISION
+2025-02-11T12:37:23.539+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_DMN_DEC_UNIQ created
+2025-02-11T12:37:23.539+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::7::flowable ran successfully in 1ms
+2025-02-11T12:37:23.539+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns DECISION_TYPE_(varchar(255)) added to ACT_DMN_DECISION
+2025-02-11T12:37:23.539+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::8::flowable ran successfully in 0ms
+2025-02-11T12:37:23.539+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_DMN_INSTANCE_ID created
+2025-02-11T12:37:23.539+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::9::flowable ran successfully in 0ms
+2025-02-11T12:37:23.539+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : UPDATE SUMMARY
+2025-02-11T12:37:23.539+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Run:                          8
+2025-02-11T12:37:23.539+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Previously run:               0
+2025-02-11T12:37:23.539+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Filtered out:                 1
+2025-02-11T12:37:23.539+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : -------------------------------
+2025-02-11T12:37:23.539+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Total change sets:            9
+2025-02-11T12:37:23.539+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : FILTERED CHANGE SETS SUMMARY
+2025-02-11T12:37:23.539+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : DBMS mismatch:                1
+2025-02-11T12:37:23.539+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Update summary generated
+2025-02-11T12:37:23.539+06:00  INFO 7224 --- [payment-service] [main] liquibase.command                        : Update command completed successfully.
+2025-02-11T12:37:23.554+06:00  INFO 7224 --- [payment-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-02-11T12:37:23.554+06:00  INFO 7224 --- [payment-service] [main] liquibase.command                        : Command execution complete
+2025-02-11T12:37:23.554+06:00  INFO 7224 --- [payment-service] [main] o.f.dmn.engine.impl.DmnEngineImpl        : DmnEngine default created
+2025-02-11T12:37:23.556+06:00  INFO 7224 --- [payment-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.cmmn.spring.configurator.SpringCmmnEngineConfigurator (priority:500000)
+2025-02-11T12:37:23.590+06:00  INFO 7224 --- [payment-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-02-11T12:37:23.607+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.ACT_CMMN_DATABASECHANGELOG
+2025-02-11T12:37:23.607+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_CMMN_DATABASECHANGELOG
+2025-02-11T12:37:23.648+06:00  INFO 7224 --- [payment-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-02-11T12:37:23.648+06:00  INFO 7224 --- [payment-service] [main] liquibase.command                        : Using deploymentId: 9255843648
+2025-02-11T12:37:23.648+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_CMMN_DATABASECHANGELOG
+2025-02-11T12:37:23.672+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_DEPLOYMENT created
+2025-02-11T12:37:23.672+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_DEPLOYMENT_RESOURCE created
+2025-02-11T12:37:23.672+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_DEPLOYMENT_RESOURCE (DEPLOYMENT_ID_)
+2025-02-11T12:37:23.672+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_CMMN_RSRC_DPL created
+2025-02-11T12:37:23.672+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_CASEDEF created
+2025-02-11T12:37:23.672+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_CASEDEF (DEPLOYMENT_ID_)
+2025-02-11T12:37:23.672+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_DEF_DPLY created
+2025-02-11T12:37:23.672+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_RU_CASE_INST created
+2025-02-11T12:37:23.672+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_CASE_INST (CASE_DEF_ID_)
+2025-02-11T12:37:23.672+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_INST_CASE_DEF created
+2025-02-11T12:37:23.672+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_INST_PARENT created
+2025-02-11T12:37:23.672+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_RU_PLAN_ITEM_INST created
+2025-02-11T12:37:23.672+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_PLAN_ITEM_INST (CASE_DEF_ID_)
+2025-02-11T12:37:23.672+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_PLAN_ITEM_CASE_DEF created
+2025-02-11T12:37:23.687+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_PLAN_ITEM_INST (CASE_INST_ID_)
+2025-02-11T12:37:23.687+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_PLAN_ITEM_CASE_INST created
+2025-02-11T12:37:23.687+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_RU_SENTRY_PART_INST created
+2025-02-11T12:37:23.690+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_SENTRY_PART_INST (CASE_DEF_ID_)
+2025-02-11T12:37:23.690+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_SENTRY_CASE_DEF created
+2025-02-11T12:37:23.690+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_SENTRY_PART_INST (CASE_INST_ID_)
+2025-02-11T12:37:23.690+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_SENTRY_CASE_INST created
+2025-02-11T12:37:23.690+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_SENTRY_PART_INST (PLAN_ITEM_INST_ID_)
+2025-02-11T12:37:23.690+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_SENTRY_PLAN_ITEM created
+2025-02-11T12:37:23.690+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_RU_MIL_INST created
+2025-02-11T12:37:23.690+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_MIL_INST (CASE_DEF_ID_)
+2025-02-11T12:37:23.690+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_MIL_CASE_DEF created
+2025-02-11T12:37:23.690+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_MIL_INST (CASE_INST_ID_)
+2025-02-11T12:37:23.690+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_MIL_CASE_INST created
+2025-02-11T12:37:23.690+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_HI_CASE_INST created
+2025-02-11T12:37:23.690+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_HI_MIL_INST created
+2025-02-11T12:37:23.690+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::1::flowable ran successfully in 18ms
+2025-02-11T12:37:23.705+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns DGRM_RESOURCE_NAME_(varchar(4000)),HAS_START_FORM_KEY_(boolean) added to ACT_CMMN_CASEDEF
+2025-02-11T12:37:23.705+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns GENERATED_(boolean) added to ACT_CMMN_DEPLOYMENT_RESOURCE
+2025-02-11T12:37:23.705+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns LOCK_TIME_(datetime) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:37:23.705+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns ITEM_DEFINITION_ID_(varchar(255)),ITEM_DEFINITION_TYPE_(varchar(255)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:37:23.705+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::2::flowable ran successfully in 1ms
+2025-02-11T12:37:23.705+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns IS_COMPLETEABLE_(boolean) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:37:23.721+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns IS_COMPLETEABLE_(boolean) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:37:23.722+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_PLAN_ITEM_STAGE_INST created
+2025-02-11T12:37:23.724+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns IS_COUNT_ENABLED_(boolean) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:37:23.726+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns VAR_COUNT_(integer) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:37:23.728+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns SENTRY_PART_INST_COUNT_(integer) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:37:23.729+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::3::flowable ran successfully in 23ms
+2025-02-11T12:37:23.732+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table ACT_CMMN_HI_PLAN_ITEM_INST created
+2025-02-11T12:37:23.734+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns TENANT_ID_(varchar(255)) added to ACT_CMMN_RU_MIL_INST
+2025-02-11T12:37:23.735+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns TENANT_ID_(varchar(255)) added to ACT_CMMN_HI_MIL_INST
+2025-02-11T12:37:23.735+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::4::flowable ran successfully in 5ms
+2025-02-11T12:37:23.738+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_DEF_UNIQ created
+2025-02-11T12:37:23.738+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::6::flowable ran successfully in 1ms
+2025-02-11T12:37:23.739+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Column ACT_CMMN_RU_PLAN_ITEM_INST.START_TIME_ renamed to CREATE_TIME_
+2025-02-11T12:37:23.739+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Column ACT_CMMN_HI_PLAN_ITEM_INST.CREATED_TIME_ renamed to CREATE_TIME_
+2025-02-11T12:37:23.754+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns LAST_AVAILABLE_TIME_(datetime(3)),LAST_ENABLED_TIME_(datetime(3)),LAST_DISABLED_TIME_(datetime(3)),LAST_STARTED_TIME_(datetime(3)),LAST_SUSPENDED_TIME_(datetime(3)),COMPLETED_TIME_(datetime(3)),OCCURRED_TIME_(datetime(3)),TERMINATED_TIME_(datetime(3)),EXIT_TIME_(datetime(3)),ENDED_TIME_(datetime(3)),ENTRY_CRITERION_ID_(varchar(255)),EXIT_CRITERION_ID_(varchar(255)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:37:23.754+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns ENTRY_CRITERION_ID_(varchar(255)),EXIT_CRITERION_ID_(varchar(255)) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:37:23.754+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::7::flowable ran successfully in 15ms
+2025-02-11T12:37:23.754+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns SHOW_IN_OVERVIEW_(boolean) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:37:23.754+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::8::flowable ran successfully in 0ms
+2025-02-11T12:37:23.754+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns EXTRA_VALUE_(varchar(255)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:37:23.754+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns EXTRA_VALUE_(varchar(255)) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:37:23.754+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::9::flowable ran successfully in 0ms
+2025-02-11T12:37:23.772+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns REFERENCE_ID_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:37:23.773+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns REFERENCE_TYPE_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:37:23.773+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_INST_REF_ID_ created
+2025-02-11T12:37:23.773+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns REFERENCE_ID_(varchar(255)) added to ACT_CMMN_HI_CASE_INST
+2025-02-11T12:37:23.773+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns REFERENCE_TYPE_(varchar(255)) added to ACT_CMMN_HI_CASE_INST
+2025-02-11T12:37:23.773+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::10::flowable ran successfully in 3ms
+2025-02-11T12:37:23.773+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns DERIVED_CASE_DEF_ID_(varchar(255)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:37:23.773+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns DERIVED_CASE_DEF_ID_(varchar(255)) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:37:23.773+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::11::flowable ran successfully in 0ms
+2025-02-11T12:37:23.773+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns LOCK_OWNER_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:37:23.773+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::12::flowable ran successfully in 0ms
+2025-02-11T12:37:23.788+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns LAST_UNAVAILABLE_TIME_(datetime(3)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:37:23.789+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns LAST_UNAVAILABLE_TIME_(datetime(3)) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:37:23.789+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::13::flowable ran successfully in 16ms
+2025-02-11T12:37:23.791+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns LAST_REACTIVATION_TIME_(datetime(3)),LAST_REACTIVATION_USER_ID_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:37:23.791+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns LAST_REACTIVATION_TIME_(datetime(3)),LAST_REACTIVATION_USER_ID_(varchar(255)) added to ACT_CMMN_HI_CASE_INST
+2025-02-11T12:37:23.791+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::14::flowable ran successfully in 0ms
+2025-02-11T12:37:23.791+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns BUSINESS_STATUS_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:37:23.791+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Columns BUSINESS_STATUS_(varchar(255)) added to ACT_CMMN_HI_CASE_INST
+2025-02-11T12:37:23.791+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::16::flowable ran successfully in 0ms
+2025-02-11T12:37:23.791+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_HI_CASE_INST_END created
+2025-02-11T12:37:23.791+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::17::flowable ran successfully in 0ms
+2025-02-11T12:37:23.791+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : UPDATE SUMMARY
+2025-02-11T12:37:23.791+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Run:                         15
+2025-02-11T12:37:23.791+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Previously run:               0
+2025-02-11T12:37:23.791+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Filtered out:                 2
+2025-02-11T12:37:23.791+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : -------------------------------
+2025-02-11T12:37:23.791+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Total change sets:           17
+2025-02-11T12:37:23.791+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : FILTERED CHANGE SETS SUMMARY
+2025-02-11T12:37:23.791+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : DBMS mismatch:                2
+2025-02-11T12:37:23.791+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Update summary generated
+2025-02-11T12:37:23.805+06:00  INFO 7224 --- [payment-service] [main] liquibase.command                        : Update command completed successfully.
+2025-02-11T12:37:23.806+06:00  INFO 7224 --- [payment-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-02-11T12:37:23.807+06:00  INFO 7224 --- [payment-service] [main] liquibase.command                        : Command execution complete
+2025-02-11T12:37:23.807+06:00  INFO 7224 --- [payment-service] [main] o.f.cmmn.engine.impl.CmmnEngineImpl      : CmmnEngine default created
+2025-02-11T12:37:23.810+06:00  INFO 7224 --- [payment-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-02-11T12:37:23.818+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.ACT_APP_DATABASECHANGELOG
+2025-02-11T12:37:23.819+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_APP_DATABASECHANGELOG
+2025-02-11T12:37:23.822+06:00  INFO 7224 --- [payment-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-02-11T12:37:23.822+06:00  INFO 7224 --- [payment-service] [main] liquibase.command                        : Using deploymentId: 9255843822
+2025-02-11T12:37:23.822+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_APP_DATABASECHANGELOG
+2025-02-11T12:37:23.822+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table ACT_APP_DEPLOYMENT created
+2025-02-11T12:37:23.822+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table ACT_APP_DEPLOYMENT_RESOURCE created
+2025-02-11T12:37:23.822+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_APP_DEPLOYMENT_RESOURCE (DEPLOYMENT_ID_)
+2025-02-11T12:37:23.822+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_APP_RSRC_DPL created
+2025-02-11T12:37:23.822+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Table ACT_APP_APPDEF created
+2025-02-11T12:37:23.822+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_APP_APPDEF (DEPLOYMENT_ID_)
+2025-02-11T12:37:23.822+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_APP_DEF_DPLY created
+2025-02-11T12:37:23.822+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/app/db/liquibase/flowable-app-db-changelog.xml::1::flowable ran successfully in 0ms
+2025-02-11T12:37:23.822+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : Index ACT_IDX_APP_DEF_UNIQ created
+2025-02-11T12:37:23.822+06:00  INFO 7224 --- [payment-service] [main] liquibase.changelog                      : ChangeSet org/flowable/app/db/liquibase/flowable-app-db-changelog.xml::3::flowable ran successfully in 0ms
+2025-02-11T12:37:23.837+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : UPDATE SUMMARY
+2025-02-11T12:37:23.837+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Run:                          2
+2025-02-11T12:37:23.837+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Previously run:               0
+2025-02-11T12:37:23.837+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Filtered out:                 1
+2025-02-11T12:37:23.837+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : -------------------------------
+2025-02-11T12:37:23.837+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Total change sets:            3
+2025-02-11T12:37:23.837+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : FILTERED CHANGE SETS SUMMARY
+2025-02-11T12:37:23.837+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : DBMS mismatch:                1
+2025-02-11T12:37:23.839+06:00  INFO 7224 --- [payment-service] [main] liquibase.util                           : Update summary generated
+2025-02-11T12:37:23.839+06:00  INFO 7224 --- [payment-service] [main] liquibase.command                        : Update command completed successfully.
+2025-02-11T12:37:23.839+06:00  INFO 7224 --- [payment-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-02-11T12:37:23.839+06:00  INFO 7224 --- [payment-service] [main] liquibase.command                        : Command execution complete
+2025-02-11T12:37:23.839+06:00  INFO 7224 --- [payment-service] [main] o.f.app.engine.impl.AppEngineImpl        : AppEngine default created
+2025-02-11T12:37:23.939+06:00  INFO 7224 --- [payment-service] [main] o.f.j.s.i.a.AbstractAsyncExecutor        : Starting up the async job executor [org.flowable.spring.job.service.SpringAsyncExecutor] for engine cmmn
+2025-02-11T12:37:23.948+06:00  INFO 7224 --- [payment-service] [Thread-3] o.f.j.s.i.a.ResetExpiredJobsRunnable     : starting to reset expired jobs for engine cmmn
+2025-02-11T12:37:23.948+06:00  INFO 7224 --- [payment-service] [main] o.f.j.s.i.a.AbstractAsyncExecutor        : Starting up the async job executor [org.flowable.spring.job.service.SpringAsyncExecutor] for engine bpmn
+2025-02-11T12:37:23.948+06:00  INFO 7224 --- [payment-service] [Thread-2] o.f.j.s.i.a.AcquireTimerJobsRunnable     : starting to acquire async jobs due for engine cmmn
+2025-02-11T12:37:23.948+06:00  INFO 7224 --- [payment-service] [Thread-1] o.f.j.s.i.a.AcquireAsyncJobsDueRunnable  : starting to acquire async jobs due for engine cmmn
+2025-02-11T12:37:23.949+06:00  INFO 7224 --- [payment-service] [Thread-4] o.f.j.s.i.a.AcquireAsyncJobsDueRunnable  : starting to acquire async jobs due for engine bpmn
+2025-02-11T12:37:23.949+06:00  INFO 7224 --- [payment-service] [Thread-6] o.f.j.s.i.a.ResetExpiredJobsRunnable     : starting to reset expired jobs for engine bpmn
+2025-02-11T12:37:23.950+06:00  INFO 7224 --- [payment-service] [Thread-5] o.f.j.s.i.a.AcquireTimerJobsRunnable     : starting to acquire async jobs due for engine bpmn
+2025-02-11T12:37:23.966+06:00  INFO 7224 --- [payment-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-02-11T12:37:23.987+06:00  INFO 7224 --- [payment-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-payment-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = payment-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-02-11T12:37:24.026+06:00  INFO 7224 --- [payment-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-02-11T12:37:24.105+06:00  INFO 7224 --- [payment-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-02-11T12:37:24.105+06:00  INFO 7224 --- [payment-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-02-11T12:37:24.105+06:00  INFO 7224 --- [payment-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1739255844105
+2025-02-11T12:37:24.105+06:00  INFO 7224 --- [payment-service] [main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Subscribed to topic(s): saga-events
+2025-02-11T12:37:24.127+06:00  INFO 7224 --- [payment-service] [main] h.f.p.PaymentServiceApplication          : Started PaymentServiceApplication in 4.203 seconds (process running for 4.458)
+2025-02-11T12:37:24.292+06:00  WARN 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Error while fetching metadata with correlation id 2 : {saga-events=LEADER_NOT_AVAILABLE}
+2025-02-11T12:37:24.294+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Cluster ID: XzrhhWtpQfK-3XwjysfkIg
+2025-02-11T12:37:24.297+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2025-02-11T12:37:24.300+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] (Re-)joining group
+2025-02-11T12:37:24.314+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Request joining group due to: need to re-join with the given member-id: consumer-payment-group-1-a7f4e30e-4e5d-4e84-b872-292901ee3676
+2025-02-11T12:37:24.315+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] (Re-)joining group
+2025-02-11T12:37:24.319+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-payment-group-1-a7f4e30e-4e5d-4e84-b872-292901ee3676', protocol='range'}
+2025-02-11T12:37:24.432+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Finished assignment for group at generation 1: {consumer-payment-group-1-a7f4e30e-4e5d-4e84-b872-292901ee3676=Assignment(partitions=[saga-events-0])}
+2025-02-11T12:37:24.444+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-payment-group-1-a7f4e30e-4e5d-4e84-b872-292901ee3676', protocol='range'}
+2025-02-11T12:37:24.445+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Notifying assignor about the new Assignment(partitions=[saga-events-0])
+2025-02-11T12:37:24.446+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Adding newly assigned partitions: saga-events-0
+2025-02-11T12:37:24.453+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Found no committed offset for partition saga-events-0
+2025-02-11T12:37:24.459+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Resetting offset for partition saga-events-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1001 rack: null)], epoch=0}}.
+2025-02-11T12:37:24.460+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : payment-group: partitions assigned: [saga-events-0]
+2025-02-11T12:38:55.112+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.p.Service.KafkaConsumer              : ************** Received message from Kafka. Message: {"orderId": "12345", "event": "ProcessPayment"} **************
+2025-02-11T12:38:55.116+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.p.Service.KafkaConsumer              : Reserving inventory action completed, sending message to Kafka. OrderId: 12345, Event: Reserve Inventory, HasInventoryReserved: true
+2025-02-11T12:38:55.125+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = payment-service-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-02-11T12:38:55.136+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-02-11T12:38:55.161+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=payment-service-producer-1] Instantiated an idempotent producer.
+2025-02-11T12:38:55.190+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-02-11T12:38:55.190+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-02-11T12:38:55.190+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1739255935190
+2025-02-11T12:38:55.203+06:00  INFO 7224 --- [payment-service] [kafka-producer-network-thread | payment-service-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=payment-service-producer-1] Cluster ID: XzrhhWtpQfK-3XwjysfkIg
+2025-02-11T12:38:55.204+06:00  INFO 7224 --- [payment-service] [kafka-producer-network-thread | payment-service-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=payment-service-producer-1] ProducerId set to 1 with epoch 0
+2025-02-11T12:44:18.171+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Revoke previously assigned partitions saga-events-0
+2025-02-11T12:44:18.171+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : payment-group: partitions revoked: [saga-events-0]
+2025-02-11T12:44:18.171+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Member consumer-payment-group-1-a7f4e30e-4e5d-4e84-b872-292901ee3676 sending LeaveGroup request to coordinator localhost:9092 (id: 2147482646 rack: null) due to the consumer unsubscribed from all topics
+2025-02-11T12:44:18.171+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-02-11T12:44:18.171+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Request joining group due to: consumer pro-actively leaving the group
+2025-02-11T12:44:18.171+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Unsubscribed all topics or patterns and assigned partitions
+2025-02-11T12:44:18.171+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-02-11T12:44:18.171+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-group-1, groupId=payment-group] Request joining group due to: consumer pro-actively leaving the group
+2025-02-11T12:44:18.462+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-02-11T12:44:18.463+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-02-11T12:44:18.463+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-02-11T12:44:18.463+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-02-11T12:44:18.470+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-payment-group-1 unregistered
+2025-02-11T12:44:18.471+06:00  INFO 7224 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : payment-group: Consumer stopped
+2025-02-11T12:44:18.473+06:00  INFO 7224 --- [payment-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-11T12:44:18.478+06:00  INFO 7224 --- [payment-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-11T12:44:18.478+06:00  INFO 7224 --- [payment-service] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=payment-service-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-02-11T12:44:18.492+06:00  INFO 7224 --- [payment-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-02-11T12:44:18.492+06:00  INFO 7224 --- [payment-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-02-11T12:44:18.493+06:00  INFO 7224 --- [payment-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-02-11T12:44:18.493+06:00  INFO 7224 --- [payment-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-02-11T12:44:18.493+06:00  INFO 7224 --- [payment-service] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for payment-service-producer-1 unregistered
+2025-02-11T12:44:18.497+06:00  INFO 7224 --- [payment-service] [SpringApplicationShutdownHook] o.f.j.s.i.a.AbstractAsyncExecutor        : Shutting down the async job executor [org.flowable.spring.job.service.SpringAsyncExecutor] for engine cmmn
+2025-02-11T12:44:18.497+06:00  INFO 7224 --- [payment-service] [flowable-cmmn-acquire-async-jobs] o.f.j.s.i.a.AcquireAsyncJobsDueRunnable  : stopped async job due acquisition for engine cmmn
+2025-02-11T12:44:18.497+06:00  INFO 7224 --- [payment-service] [flowable-cmmn-acquire-timer-jobs] o.f.j.s.i.a.AcquireTimerJobsRunnable     : stopped async job due acquisition for engine cmmn
+2025-02-11T12:44:18.497+06:00  INFO 7224 --- [payment-service] [flowable-cmmn-reset-expired-jobs] o.f.j.s.i.a.ResetExpiredJobsRunnable     : stopped resetting expired jobs for engine cmmn
+2025-02-11T12:44:18.500+06:00  INFO 7224 --- [payment-service] [SpringApplicationShutdownHook] o.f.j.s.i.a.AbstractAsyncExecutor        : Shutting down the async job executor [org.flowable.spring.job.service.SpringAsyncExecutor] for engine bpmn
+2025-02-11T12:44:18.500+06:00  INFO 7224 --- [payment-service] [flowable-bpmn-reset-expired-jobs] o.f.j.s.i.a.ResetExpiredJobsRunnable     : stopped resetting expired jobs for engine bpmn
+2025-02-11T12:44:18.500+06:00  INFO 7224 --- [payment-service] [flowable-bpmn-acquire-async-jobs] o.f.j.s.i.a.AcquireAsyncJobsDueRunnable  : stopped async job due acquisition for engine bpmn
+2025-02-11T12:44:18.500+06:00  INFO 7224 --- [payment-service] [flowable-bpmn-acquire-timer-jobs] o.f.j.s.i.a.AcquireTimerJobsRunnable     : stopped async job due acquisition for engine bpmn
+2025-02-11T12:44:18.503+06:00  INFO 7224 --- [payment-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T12:44:18.505+06:00  INFO 7224 --- [payment-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

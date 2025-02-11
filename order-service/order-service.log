@@ -1,0 +1,276 @@
+2025-02-11T16:48:21.118+06:00  INFO 14324 --- [order-service] [main] h.f.o.OrderServiceApplication            : Starting OrderServiceApplication using Java 21.0.6 with PID 14324 (D:\Projects\Code\spring-flowable-microservice-event-driven-example\order-service\target\classes started by anirudhya.sarker in D:\Projects\Code\spring-flowable-microservice-event-driven-example\order-service)
+2025-02-11T16:48:21.123+06:00  INFO 14324 --- [order-service] [main] h.f.o.OrderServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T16:48:21.868+06:00  INFO 14324 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-02-11T16:48:21.906+06:00  INFO 14324 --- [order-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-11T16:48:21.914+06:00  INFO 14324 --- [order-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-11T16:48:21.974+06:00  INFO 14324 --- [order-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-11T16:48:21.974+06:00  INFO 14324 --- [order-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 811 ms
+2025-02-11T16:48:22.325+06:00  INFO 14324 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-02-11T16:48:22.358+06:00  INFO 14324 --- [order-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-order-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = order-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-02-11T16:48:22.391+06:00  INFO 14324 --- [order-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-02-11T16:48:22.517+06:00  INFO 14324 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-02-11T16:48:22.517+06:00  INFO 14324 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-02-11T16:48:22.517+06:00  INFO 14324 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1739270902517
+2025-02-11T16:48:22.517+06:00  INFO 14324 --- [order-service] [main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Subscribed to topic(s): saga-events
+2025-02-11T16:48:22.529+06:00  INFO 14324 --- [order-service] [main] h.f.o.OrderServiceApplication            : Started OrderServiceApplication in 1.77 seconds (process running for 2.073)
+2025-02-11T16:48:22.849+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-order-group-1, groupId=order-group] Cluster ID: XzrhhWtpQfK-3XwjysfkIg
+2025-02-11T16:48:22.851+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2025-02-11T16:48:22.853+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] (Re-)joining group
+2025-02-11T16:48:22.866+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Request joining group due to: need to re-join with the given member-id: consumer-order-group-1-2a6cd159-afa3-44b6-b217-00d99b7e5e6e
+2025-02-11T16:48:22.867+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] (Re-)joining group
+2025-02-11T16:48:22.870+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-order-group-1-2a6cd159-afa3-44b6-b217-00d99b7e5e6e', protocol='range'}
+2025-02-11T16:48:22.875+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Finished assignment for group at generation 1: {consumer-order-group-1-2a6cd159-afa3-44b6-b217-00d99b7e5e6e=Assignment(partitions=[saga-events-0])}
+2025-02-11T16:48:22.882+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-order-group-1-2a6cd159-afa3-44b6-b217-00d99b7e5e6e', protocol='range'}
+2025-02-11T16:48:22.883+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Notifying assignor about the new Assignment(partitions=[saga-events-0])
+2025-02-11T16:48:22.884+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-order-group-1, groupId=order-group] Adding newly assigned partitions: saga-events-0
+2025-02-11T16:48:22.894+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Found no committed offset for partition saga-events-0
+2025-02-11T16:48:22.904+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-order-group-1, groupId=order-group] Resetting offset for partition saga-events-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1001 rack: null)], epoch=0}}.
+2025-02-11T16:48:22.905+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order-group: partitions assigned: [saga-events-0]
+2025-02-11T16:48:22.928+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : ************** Received message from Kafka. Message: {"orderId": "12345", "event": "ProcessPayment"} **************
+2025-02-11T16:48:22.928+06:00  WARN 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : Unknown event received from Kafka. Event: ProcessPayment
+2025-02-11T16:50:43.314+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : ************** Received message from Kafka. Message: {"orderId": "12345", "event": "sendCreateOrder"} **************
+2025-02-11T16:50:43.315+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : Order initiated. Sending message to Kafka. OrderId: 12345, Event: OrderInitiated
+2025-02-11T16:50:43.326+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = order-service-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-02-11T16:50:43.335+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-02-11T16:50:43.352+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=order-service-producer-1] Instantiated an idempotent producer.
+2025-02-11T16:50:43.398+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-02-11T16:50:43.404+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-02-11T16:50:43.404+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1739271043398
+2025-02-11T16:50:43.424+06:00  INFO 14324 --- [order-service] [kafka-producer-network-thread | order-service-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=order-service-producer-1] Cluster ID: XzrhhWtpQfK-3XwjysfkIg
+2025-02-11T16:50:43.425+06:00  INFO 14324 --- [order-service] [kafka-producer-network-thread | order-service-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=order-service-producer-1] ProducerId set to 3 with epoch 0
+2025-02-11T16:57:23.134+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-order-group-1, groupId=order-group] Node -1 disconnected.
+2025-02-11T16:59:43.489+06:00  INFO 14324 --- [order-service] [kafka-producer-network-thread | order-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=order-service-producer-1] Node -1 disconnected.
+2025-02-11T17:07:23.007+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-order-group-1, groupId=order-group] Node -1 disconnected.
+2025-02-11T17:09:43.512+06:00  INFO 14324 --- [order-service] [kafka-producer-network-thread | order-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=order-service-producer-1] Node -1 disconnected.
+2025-02-11T17:49:05.924+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-order-group-1, groupId=order-group] Node 2147482646 disconnected.
+2025-02-11T17:49:05.960+06:00  INFO 14324 --- [order-service] [kafka-coordinator-heartbeat-thread | order-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147482646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2025-02-11T17:49:06.118+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2025-02-11T17:49:09.139+06:00  INFO 14324 --- [order-service] [kafka-producer-network-thread | order-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=order-service-producer-1] Node 1001 disconnected.
+2025-02-11T18:00:10.571+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-order-group-1, groupId=order-group] Node 2147482646 disconnected.
+2025-02-11T18:00:10.573+06:00  INFO 14324 --- [order-service] [kafka-coordinator-heartbeat-thread | order-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147482646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2025-02-11T18:00:10.582+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2025-02-11T18:00:10.585+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147482646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-02-11T18:00:10.587+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147482646 rack: null)
+2025-02-11T18:00:10.748+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2025-02-11T18:09:59.392+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-order-group-1, groupId=order-group] Node 2147482646 disconnected.
+2025-02-11T18:09:59.394+06:00  INFO 14324 --- [order-service] [kafka-coordinator-heartbeat-thread | order-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147482646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2025-02-11T18:09:59.401+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2025-02-11T18:09:59.405+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147482646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-02-11T18:09:59.407+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147482646 rack: null)
+2025-02-11T18:09:59.523+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2025-02-11T18:10:20.110+06:00  INFO 14324 --- [order-service] [kafka-producer-network-thread | order-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=order-service-producer-1] Node 1001 disconnected.
+2025-02-11T18:10:36.300+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-order-group-1, groupId=order-group] Revoke previously assigned partitions saga-events-0
+2025-02-11T18:10:36.300+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order-group: partitions revoked: [saga-events-0]
+2025-02-11T18:10:36.300+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Member consumer-order-group-1-2a6cd159-afa3-44b6-b217-00d99b7e5e6e sending LeaveGroup request to coordinator localhost:9092 (id: 2147482646 rack: null) due to the consumer unsubscribed from all topics
+2025-02-11T18:10:36.300+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-02-11T18:10:36.300+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Request joining group due to: consumer pro-actively leaving the group
+2025-02-11T18:10:36.300+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Unsubscribed all topics or patterns and assigned partitions
+2025-02-11T18:10:36.300+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-02-11T18:10:36.300+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-group-1, groupId=order-group] Request joining group due to: consumer pro-actively leaving the group
+2025-02-11T18:10:36.346+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-02-11T18:10:36.346+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-02-11T18:10:36.347+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-02-11T18:10:36.347+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-02-11T18:10:36.350+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-order-group-1 unregistered
+2025-02-11T18:10:36.351+06:00  INFO 14324 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order-group: Consumer stopped
+2025-02-11T18:10:36.352+06:00  INFO 14324 --- [order-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-11T18:10:36.361+06:00  INFO 14324 --- [order-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-11T18:10:36.362+06:00  INFO 14324 --- [order-service] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=order-service-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-02-11T18:10:36.367+06:00  INFO 14324 --- [order-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-02-11T18:10:36.367+06:00  INFO 14324 --- [order-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-02-11T18:10:36.367+06:00  INFO 14324 --- [order-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-02-11T18:10:36.367+06:00  INFO 14324 --- [order-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-02-11T18:10:36.367+06:00  INFO 14324 --- [order-service] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for order-service-producer-1 unregistered

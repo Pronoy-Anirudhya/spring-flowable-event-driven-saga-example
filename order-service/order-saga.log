@@ -1,0 +1,1094 @@
+2025-02-11T12:32:21.739+06:00  INFO 13240 --- [order-service] [main] h.f.o.OrderServiceApplication            : Starting OrderServiceApplication using Java 21.0.6 with PID 13240 (D:\Projects\Code\spring-flowable-microservice-event-driven-example\order-service\target\classes started by anirudhya.sarker in D:\Projects\Code\spring-flowable-microservice-event-driven-example\order-service)
+2025-02-11T12:32:21.741+06:00  INFO 13240 --- [order-service] [main] h.f.o.OrderServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T12:32:22.455+06:00  INFO 13240 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-11T12:32:22.465+06:00  INFO 13240 --- [order-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-11T12:32:22.466+06:00  INFO 13240 --- [order-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-11T12:32:22.506+06:00  INFO 13240 --- [order-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-11T12:32:22.506+06:00  INFO 13240 --- [order-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 738 ms
+2025-02-11T12:32:22.739+06:00  INFO 13240 --- [order-service] [main] o.f.s.b.c.CmmnEngineAutoConfiguration    : No deployment resources were found for autodeployment
+2025-02-11T12:32:22.783+06:00  INFO 13240 --- [order-service] [main] o.f.s.b.dmn.DmnEngineAutoConfiguration   : No deployment resources were found for autodeployment
+2025-02-11T12:32:22.803+06:00  INFO 13240 --- [order-service] [main] o.f.s.b.e.EventRegistryAutoConfiguration : No deployment resources were found for autodeployment
+2025-02-11T12:32:22.875+06:00  INFO 13240 --- [order-service] [main] o.f.s.b.app.AppEngineAutoConfiguration   : No deployment resources were found for autodeployment
+2025-02-11T12:32:22.882+06:00  INFO 13240 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Found 5 Engine Configurators in total:
+2025-02-11T12:32:22.883+06:00  INFO 13240 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.engine.spring.configurator.SpringProcessEngineConfigurator (priority:50000)
+2025-02-11T12:32:22.883+06:00  INFO 13240 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.eventregistry.spring.configurator.SpringEventRegistryConfigurator (priority:100000)
+2025-02-11T12:32:22.883+06:00  INFO 13240 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.idm.spring.configurator.SpringIdmEngineConfigurator (priority:150000)
+2025-02-11T12:32:22.883+06:00  INFO 13240 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.dmn.spring.configurator.SpringDmnEngineConfigurator (priority:200000)
+2025-02-11T12:32:22.883+06:00  INFO 13240 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.cmmn.spring.configurator.SpringCmmnEngineConfigurator (priority:500000)
+2025-02-11T12:32:22.883+06:00  INFO 13240 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.engine.spring.configurator.SpringProcessEngineConfigurator (priority:50000)
+2025-02-11T12:32:22.903+06:00  INFO 13240 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.eventregistry.spring.configurator.SpringEventRegistryConfigurator (priority:100000)
+2025-02-11T12:32:22.906+06:00  INFO 13240 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.idm.spring.configurator.SpringIdmEngineConfigurator (priority:150000)
+2025-02-11T12:32:22.906+06:00  INFO 13240 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.dmn.spring.configurator.SpringDmnEngineConfigurator (priority:200000)
+2025-02-11T12:32:22.906+06:00  INFO 13240 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.cmmn.spring.configurator.SpringCmmnEngineConfigurator (priority:500000)
+2025-02-11T12:32:22.927+06:00  INFO 13240 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T12:32:23.048+06:00  INFO 13240 --- [order-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:e7499615-38bc-43c1-8a27-9222bed358b3 user=SA
+2025-02-11T12:32:23.054+06:00  INFO 13240 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T12:32:23.639+06:00  INFO 13240 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.engine.spring.configurator.SpringProcessEngineConfigurator (priority:50000)
+2025-02-11T12:32:23.761+06:00  INFO 13240 --- [order-service] [main] o.f.c.e.impl.db.CommonDbSchemaManager    : performing create on common with resource org/flowable/common/db/create/flowable.h2.create.common.sql
+2025-02-11T12:32:23.770+06:00  INFO 13240 --- [order-service] [main] o.f.i.s.i.d.IdentityLinkDbSchemaManager  : performing create on identitylink with resource org/flowable/identitylink/service/db/create/flowable.h2.create.identitylink.sql
+2025-02-11T12:32:23.775+06:00  INFO 13240 --- [order-service] [main] o.f.i.s.i.d.IdentityLinkDbSchemaManager  : performing create on identitylink.history with resource org/flowable/identitylink/service/db/create/flowable.h2.create.identitylink.history.sql
+2025-02-11T12:32:23.780+06:00  INFO 13240 --- [order-service] [main] o.f.e.s.i.db.EntityLinkDbSchemaManager   : performing create on entitylink with resource org/flowable/entitylink/service/db/create/flowable.h2.create.entitylink.sql
+2025-02-11T12:32:23.785+06:00  INFO 13240 --- [order-service] [main] o.f.e.s.i.db.EntityLinkDbSchemaManager   : performing create on entitylink.history with resource org/flowable/entitylink/service/db/create/flowable.h2.create.entitylink.history.sql
+2025-02-11T12:32:23.788+06:00  INFO 13240 --- [order-service] [main] e.s.i.d.EventSubscriptionDbSchemaManager : performing create on eventsubscription with resource org/flowable/eventsubscription/service/db/create/flowable.h2.create.eventsubscription.sql
+2025-02-11T12:32:23.792+06:00  INFO 13240 --- [order-service] [main] o.f.t.s.impl.db.TaskDbSchemaManager      : performing create on task with resource org/flowable/task/service/db/create/flowable.h2.create.task.sql
+2025-02-11T12:32:23.796+06:00  INFO 13240 --- [order-service] [main] o.f.t.s.impl.db.TaskDbSchemaManager      : performing create on task.history with resource org/flowable/task/service/db/create/flowable.h2.create.task.history.sql
+2025-02-11T12:32:23.801+06:00  INFO 13240 --- [order-service] [main] o.f.v.s.impl.db.VariableDbSchemaManager  : performing create on variable with resource org/flowable/variable/service/db/create/flowable.h2.create.variable.sql
+2025-02-11T12:32:23.814+06:00  INFO 13240 --- [order-service] [main] o.f.v.s.impl.db.VariableDbSchemaManager  : performing create on variable.history with resource org/flowable/variable/service/db/create/flowable.h2.create.variable.history.sql
+2025-02-11T12:32:23.817+06:00  INFO 13240 --- [order-service] [main] o.f.j.s.impl.db.JobDbSchemaManager       : performing create on job with resource org/flowable/job/service/db/create/flowable.h2.create.job.sql
+2025-02-11T12:32:23.891+06:00  INFO 13240 --- [order-service] [main] o.f.b.s.impl.db.BatchDbSchemaManager     : performing create on batch with resource org/flowable/batch/service/db/create/flowable.h2.create.batch.sql
+2025-02-11T12:32:23.896+06:00  INFO 13240 --- [order-service] [main] o.f.e.impl.db.ProcessDbSchemaManager     : performing create on engine with resource org/flowable/db/create/flowable.h2.create.engine.sql
+2025-02-11T12:32:23.932+06:00  INFO 13240 --- [order-service] [main] o.f.e.impl.db.ProcessDbSchemaManager     : performing create on history with resource org/flowable/db/create/flowable.h2.create.history.sql
+2025-02-11T12:32:23.939+06:00  INFO 13240 --- [order-service] [main] o.f.engine.impl.ProcessEngineImpl        : ProcessEngine default created
+2025-02-11T12:32:23.970+06:00  INFO 13240 --- [order-service] [main] o.f.e.impl.cmd.ValidateV5EntitiesCmd     : Total of v5 deployments found: 0
+2025-02-11T12:32:23.984+06:00  INFO 13240 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.eventregistry.spring.configurator.SpringEventRegistryConfigurator (priority:100000)
+2025-02-11T12:32:24.055+06:00  INFO 13240 --- [order-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-02-11T12:32:24.296+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.FLW_EV_DATABASECHANGELOG
+2025-02-11T12:32:24.358+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Reading from PUBLIC.FLW_EV_DATABASECHANGELOG
+2025-02-11T12:32:24.414+06:00  INFO 13240 --- [order-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-02-11T12:32:24.415+06:00  INFO 13240 --- [order-service] [main] liquibase.command                        : Using deploymentId: 9255544415
+2025-02-11T12:32:24.416+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Reading from PUBLIC.FLW_EV_DATABASECHANGELOG
+2025-02-11T12:32:24.451+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table FLW_EVENT_DEPLOYMENT created
+2025-02-11T12:32:24.452+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table FLW_EVENT_RESOURCE created
+2025-02-11T12:32:24.454+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table FLW_EVENT_DEFINITION created
+2025-02-11T12:32:24.456+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_EVENT_DEF_UNIQ created
+2025-02-11T12:32:24.457+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table FLW_CHANNEL_DEFINITION created
+2025-02-11T12:32:24.459+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_CHANNEL_DEF_UNIQ created
+2025-02-11T12:32:24.459+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/eventregistry/db/liquibase/flowable-eventregistry-db-changelog.xml::1::flowable ran successfully in 12ms
+2025-02-11T12:32:24.467+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns TYPE_(varchar(255)) added to FLW_CHANNEL_DEFINITION
+2025-02-11T12:32:24.470+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns IMPLEMENTATION_(varchar(255)) added to FLW_CHANNEL_DEFINITION
+2025-02-11T12:32:24.472+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/eventregistry/db/liquibase/flowable-eventregistry-db-changelog.xml::2::flowable ran successfully in 8ms
+2025-02-11T12:32:24.478+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Set Channel Definition type and implementation columns
+2025-02-11T12:32:24.478+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/eventregistry/db/liquibase/flowable-eventregistry-db-changelog.xml::3::flowable ran successfully in 5ms
+2025-02-11T12:32:24.483+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : UPDATE SUMMARY
+2025-02-11T12:32:24.483+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Run:                          3
+2025-02-11T12:32:24.483+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Previously run:               0
+2025-02-11T12:32:24.484+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Filtered out:                 0
+2025-02-11T12:32:24.484+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : -------------------------------
+2025-02-11T12:32:24.484+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Total change sets:            3
+2025-02-11T12:32:24.485+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Update summary generated
+2025-02-11T12:32:24.486+06:00  INFO 13240 --- [order-service] [main] liquibase.command                        : Update command completed successfully.
+2025-02-11T12:32:24.488+06:00  INFO 13240 --- [order-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-02-11T12:32:24.488+06:00  INFO 13240 --- [order-service] [main] liquibase.command                        : Command execution complete
+2025-02-11T12:32:24.490+06:00  INFO 13240 --- [order-service] [main] o.f.e.impl.EventRegistryEngineImpl       : EventRegistryEngine default created
+2025-02-11T12:32:24.491+06:00  INFO 13240 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.idm.spring.configurator.SpringIdmEngineConfigurator (priority:150000)
+2025-02-11T12:32:24.497+06:00  INFO 13240 --- [order-service] [main] o.f.i.engine.impl.db.IdmDbSchemaManager  : performing create on identity with resource org/flowable/idm/db/create/flowable.h2.create.identity.sql
+2025-02-11T12:32:24.501+06:00  INFO 13240 --- [order-service] [main] o.f.idm.engine.impl.IdmEngineImpl        : IdmEngine default created
+2025-02-11T12:32:24.502+06:00  INFO 13240 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.dmn.spring.configurator.SpringDmnEngineConfigurator (priority:200000)
+2025-02-11T12:32:24.514+06:00  INFO 13240 --- [order-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-02-11T12:32:24.535+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.ACT_DMN_DATABASECHANGELOG
+2025-02-11T12:32:24.537+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_DMN_DATABASECHANGELOG
+2025-02-11T12:32:24.562+06:00  INFO 13240 --- [order-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-02-11T12:32:24.563+06:00  INFO 13240 --- [order-service] [main] liquibase.command                        : Using deploymentId: 9255544563
+2025-02-11T12:32:24.563+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_DMN_DATABASECHANGELOG
+2025-02-11T12:32:24.575+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table ACT_DMN_DEPLOYMENT created
+2025-02-11T12:32:24.576+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table ACT_DMN_DEPLOYMENT_RESOURCE created
+2025-02-11T12:32:24.579+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table ACT_DMN_DECISION_TABLE created
+2025-02-11T12:32:24.579+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::1::activiti ran successfully in 5ms
+2025-02-11T12:32:24.583+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table ACT_DMN_HI_DECISION_EXECUTION created
+2025-02-11T12:32:24.583+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::2::flowable ran successfully in 1ms
+2025-02-11T12:32:24.590+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns SCOPE_TYPE_(varchar(255)) added to ACT_DMN_HI_DECISION_EXECUTION
+2025-02-11T12:32:24.592+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::3::flowable ran successfully in 6ms
+2025-02-11T12:32:24.595+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Column ACT_DMN_DECISION_TABLE.PARENT_DEPLOYMENT_ID_ dropped
+2025-02-11T12:32:24.598+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::4::flowable ran successfully in 4ms
+2025-02-11T12:32:24.601+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_DEC_TBL_UNIQ created
+2025-02-11T12:32:24.601+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::6::flowable ran successfully in 1ms
+2025-02-11T12:32:24.603+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_DEC_TBL_UNIQ dropped from table ACT_DMN_DECISION_TABLE
+2025-02-11T12:32:24.609+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table ACT_DMN_DECISION_TABLE renamed to ACT_DMN_DECISION
+2025-02-11T12:32:24.610+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_DMN_DEC_UNIQ created
+2025-02-11T12:32:24.611+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::7::flowable ran successfully in 7ms
+2025-02-11T12:32:24.614+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns DECISION_TYPE_(varchar(255)) added to ACT_DMN_DECISION
+2025-02-11T12:32:24.614+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::8::flowable ran successfully in 2ms
+2025-02-11T12:32:24.616+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_DMN_INSTANCE_ID created
+2025-02-11T12:32:24.618+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::9::flowable ran successfully in 3ms
+2025-02-11T12:32:24.622+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : UPDATE SUMMARY
+2025-02-11T12:32:24.622+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Run:                          8
+2025-02-11T12:32:24.622+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Previously run:               0
+2025-02-11T12:32:24.622+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Filtered out:                 1
+2025-02-11T12:32:24.622+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : -------------------------------
+2025-02-11T12:32:24.623+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Total change sets:            9
+2025-02-11T12:32:24.623+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : FILTERED CHANGE SETS SUMMARY
+2025-02-11T12:32:24.623+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : DBMS mismatch:                1
+2025-02-11T12:32:24.626+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Update summary generated
+2025-02-11T12:32:24.627+06:00  INFO 13240 --- [order-service] [main] liquibase.command                        : Update command completed successfully.
+2025-02-11T12:32:24.628+06:00  INFO 13240 --- [order-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-02-11T12:32:24.628+06:00  INFO 13240 --- [order-service] [main] liquibase.command                        : Command execution complete
+2025-02-11T12:32:24.629+06:00  INFO 13240 --- [order-service] [main] o.f.dmn.engine.impl.DmnEngineImpl        : DmnEngine default created
+2025-02-11T12:32:24.629+06:00  INFO 13240 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.cmmn.spring.configurator.SpringCmmnEngineConfigurator (priority:500000)
+2025-02-11T12:32:24.679+06:00  INFO 13240 --- [order-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-02-11T12:32:24.826+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.ACT_CMMN_DATABASECHANGELOG
+2025-02-11T12:32:24.827+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_CMMN_DATABASECHANGELOG
+2025-02-11T12:32:24.871+06:00  INFO 13240 --- [order-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-02-11T12:32:24.871+06:00  INFO 13240 --- [order-service] [main] liquibase.command                        : Using deploymentId: 9255544871
+2025-02-11T12:32:24.872+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_CMMN_DATABASECHANGELOG
+2025-02-11T12:32:24.891+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_DEPLOYMENT created
+2025-02-11T12:32:24.894+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_DEPLOYMENT_RESOURCE created
+2025-02-11T12:32:24.896+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_DEPLOYMENT_RESOURCE (DEPLOYMENT_ID_)
+2025-02-11T12:32:24.897+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_CMMN_RSRC_DPL created
+2025-02-11T12:32:24.898+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_CASEDEF created
+2025-02-11T12:32:24.900+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_CASEDEF (DEPLOYMENT_ID_)
+2025-02-11T12:32:24.901+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_DEF_DPLY created
+2025-02-11T12:32:24.903+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_RU_CASE_INST created
+2025-02-11T12:32:24.904+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_CASE_INST (CASE_DEF_ID_)
+2025-02-11T12:32:24.905+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_INST_CASE_DEF created
+2025-02-11T12:32:24.905+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_INST_PARENT created
+2025-02-11T12:32:24.907+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_RU_PLAN_ITEM_INST created
+2025-02-11T12:32:24.908+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_PLAN_ITEM_INST (CASE_DEF_ID_)
+2025-02-11T12:32:24.909+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_PLAN_ITEM_CASE_DEF created
+2025-02-11T12:32:24.909+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_PLAN_ITEM_INST (CASE_INST_ID_)
+2025-02-11T12:32:24.910+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_PLAN_ITEM_CASE_INST created
+2025-02-11T12:32:24.911+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_RU_SENTRY_PART_INST created
+2025-02-11T12:32:24.913+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_SENTRY_PART_INST (CASE_DEF_ID_)
+2025-02-11T12:32:24.913+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_SENTRY_CASE_DEF created
+2025-02-11T12:32:24.914+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_SENTRY_PART_INST (CASE_INST_ID_)
+2025-02-11T12:32:24.915+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_SENTRY_CASE_INST created
+2025-02-11T12:32:24.916+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_SENTRY_PART_INST (PLAN_ITEM_INST_ID_)
+2025-02-11T12:32:24.916+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_SENTRY_PLAN_ITEM created
+2025-02-11T12:32:24.917+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_RU_MIL_INST created
+2025-02-11T12:32:24.919+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_MIL_INST (CASE_DEF_ID_)
+2025-02-11T12:32:24.920+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_MIL_CASE_DEF created
+2025-02-11T12:32:24.920+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_MIL_INST (CASE_INST_ID_)
+2025-02-11T12:32:24.921+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_MIL_CASE_INST created
+2025-02-11T12:32:24.922+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_HI_CASE_INST created
+2025-02-11T12:32:24.923+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_HI_MIL_INST created
+2025-02-11T12:32:24.923+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::1::flowable ran successfully in 32ms
+2025-02-11T12:32:24.930+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns DGRM_RESOURCE_NAME_(varchar(4000)),HAS_START_FORM_KEY_(boolean) added to ACT_CMMN_CASEDEF
+2025-02-11T12:32:24.932+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns GENERATED_(boolean) added to ACT_CMMN_DEPLOYMENT_RESOURCE
+2025-02-11T12:32:24.934+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns LOCK_TIME_(datetime) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:32:24.937+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns ITEM_DEFINITION_ID_(varchar(255)),ITEM_DEFINITION_TYPE_(varchar(255)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:32:24.938+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::2::flowable ran successfully in 11ms
+2025-02-11T12:32:24.940+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns IS_COMPLETEABLE_(boolean) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:32:24.943+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns IS_COMPLETEABLE_(boolean) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:32:24.943+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_PLAN_ITEM_STAGE_INST created
+2025-02-11T12:32:24.945+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns IS_COUNT_ENABLED_(boolean) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:32:24.947+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns VAR_COUNT_(integer) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:32:24.950+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns SENTRY_PART_INST_COUNT_(integer) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:32:24.950+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::3::flowable ran successfully in 11ms
+2025-02-11T12:32:24.953+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_HI_PLAN_ITEM_INST created
+2025-02-11T12:32:24.956+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns TENANT_ID_(varchar(255)) added to ACT_CMMN_RU_MIL_INST
+2025-02-11T12:32:24.957+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns TENANT_ID_(varchar(255)) added to ACT_CMMN_HI_MIL_INST
+2025-02-11T12:32:24.957+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::4::flowable ran successfully in 5ms
+2025-02-11T12:32:24.960+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_DEF_UNIQ created
+2025-02-11T12:32:24.960+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::6::flowable ran successfully in 1ms
+2025-02-11T12:32:24.962+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Column ACT_CMMN_RU_PLAN_ITEM_INST.START_TIME_ renamed to CREATE_TIME_
+2025-02-11T12:32:24.963+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Column ACT_CMMN_HI_PLAN_ITEM_INST.CREATED_TIME_ renamed to CREATE_TIME_
+2025-02-11T12:32:24.981+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns LAST_AVAILABLE_TIME_(datetime(3)),LAST_ENABLED_TIME_(datetime(3)),LAST_DISABLED_TIME_(datetime(3)),LAST_STARTED_TIME_(datetime(3)),LAST_SUSPENDED_TIME_(datetime(3)),COMPLETED_TIME_(datetime(3)),OCCURRED_TIME_(datetime(3)),TERMINATED_TIME_(datetime(3)),EXIT_TIME_(datetime(3)),ENDED_TIME_(datetime(3)),ENTRY_CRITERION_ID_(varchar(255)),EXIT_CRITERION_ID_(varchar(255)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:32:24.983+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns ENTRY_CRITERION_ID_(varchar(255)),EXIT_CRITERION_ID_(varchar(255)) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:32:24.984+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::7::flowable ran successfully in 22ms
+2025-02-11T12:32:24.986+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns SHOW_IN_OVERVIEW_(boolean) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:32:24.986+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::8::flowable ran successfully in 1ms
+2025-02-11T12:32:24.990+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns EXTRA_VALUE_(varchar(255)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:32:24.992+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns EXTRA_VALUE_(varchar(255)) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:32:24.992+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::9::flowable ran successfully in 4ms
+2025-02-11T12:32:24.995+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns REFERENCE_ID_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:32:24.996+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns REFERENCE_TYPE_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:32:24.997+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_INST_REF_ID_ created
+2025-02-11T12:32:24.998+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns REFERENCE_ID_(varchar(255)) added to ACT_CMMN_HI_CASE_INST
+2025-02-11T12:32:24.999+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns REFERENCE_TYPE_(varchar(255)) added to ACT_CMMN_HI_CASE_INST
+2025-02-11T12:32:24.999+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::10::flowable ran successfully in 6ms
+2025-02-11T12:32:25.002+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns DERIVED_CASE_DEF_ID_(varchar(255)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:32:25.003+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns DERIVED_CASE_DEF_ID_(varchar(255)) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:32:25.005+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::11::flowable ran successfully in 5ms
+2025-02-11T12:32:25.008+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns LOCK_OWNER_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:32:25.008+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::12::flowable ran successfully in 1ms
+2025-02-11T12:32:25.013+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns LAST_UNAVAILABLE_TIME_(datetime(3)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:32:25.013+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns LAST_UNAVAILABLE_TIME_(datetime(3)) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:32:25.014+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::13::flowable ran successfully in 3ms
+2025-02-11T12:32:25.018+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns LAST_REACTIVATION_TIME_(datetime(3)),LAST_REACTIVATION_USER_ID_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:32:25.023+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns LAST_REACTIVATION_TIME_(datetime(3)),LAST_REACTIVATION_USER_ID_(varchar(255)) added to ACT_CMMN_HI_CASE_INST
+2025-02-11T12:32:25.064+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::14::flowable ran successfully in 48ms
+2025-02-11T12:32:25.065+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns BUSINESS_STATUS_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:32:25.072+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Columns BUSINESS_STATUS_(varchar(255)) added to ACT_CMMN_HI_CASE_INST
+2025-02-11T12:32:25.072+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::16::flowable ran successfully in 7ms
+2025-02-11T12:32:25.075+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_HI_CASE_INST_END created
+2025-02-11T12:32:25.075+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::17::flowable ran successfully in 1ms
+2025-02-11T12:32:25.077+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : UPDATE SUMMARY
+2025-02-11T12:32:25.078+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Run:                         15
+2025-02-11T12:32:25.078+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Previously run:               0
+2025-02-11T12:32:25.078+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Filtered out:                 2
+2025-02-11T12:32:25.078+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : -------------------------------
+2025-02-11T12:32:25.078+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Total change sets:           17
+2025-02-11T12:32:25.079+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : FILTERED CHANGE SETS SUMMARY
+2025-02-11T12:32:25.079+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : DBMS mismatch:                2
+2025-02-11T12:32:25.079+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Update summary generated
+2025-02-11T12:32:25.080+06:00  INFO 13240 --- [order-service] [main] liquibase.command                        : Update command completed successfully.
+2025-02-11T12:32:25.081+06:00  INFO 13240 --- [order-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-02-11T12:32:25.081+06:00  INFO 13240 --- [order-service] [main] liquibase.command                        : Command execution complete
+2025-02-11T12:32:25.082+06:00  INFO 13240 --- [order-service] [main] o.f.cmmn.engine.impl.CmmnEngineImpl      : CmmnEngine default created
+2025-02-11T12:32:25.084+06:00  INFO 13240 --- [order-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-02-11T12:32:25.094+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.ACT_APP_DATABASECHANGELOG
+2025-02-11T12:32:25.096+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_APP_DATABASECHANGELOG
+2025-02-11T12:32:25.104+06:00  INFO 13240 --- [order-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-02-11T12:32:25.104+06:00  INFO 13240 --- [order-service] [main] liquibase.command                        : Using deploymentId: 9255545104
+2025-02-11T12:32:25.104+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_APP_DATABASECHANGELOG
+2025-02-11T12:32:25.126+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table ACT_APP_DEPLOYMENT created
+2025-02-11T12:32:25.130+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table ACT_APP_DEPLOYMENT_RESOURCE created
+2025-02-11T12:32:25.133+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_APP_DEPLOYMENT_RESOURCE (DEPLOYMENT_ID_)
+2025-02-11T12:32:25.135+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_APP_RSRC_DPL created
+2025-02-11T12:32:25.136+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Table ACT_APP_APPDEF created
+2025-02-11T12:32:25.137+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_APP_APPDEF (DEPLOYMENT_ID_)
+2025-02-11T12:32:25.137+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_APP_DEF_DPLY created
+2025-02-11T12:32:25.138+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/app/db/liquibase/flowable-app-db-changelog.xml::1::flowable ran successfully in 14ms
+2025-02-11T12:32:25.140+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_APP_DEF_UNIQ created
+2025-02-11T12:32:25.143+06:00  INFO 13240 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/app/db/liquibase/flowable-app-db-changelog.xml::3::flowable ran successfully in 4ms
+2025-02-11T12:32:25.145+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : UPDATE SUMMARY
+2025-02-11T12:32:25.147+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Run:                          2
+2025-02-11T12:32:25.147+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Previously run:               0
+2025-02-11T12:32:25.147+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Filtered out:                 1
+2025-02-11T12:32:25.147+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : -------------------------------
+2025-02-11T12:32:25.148+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Total change sets:            3
+2025-02-11T12:32:25.148+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : FILTERED CHANGE SETS SUMMARY
+2025-02-11T12:32:25.148+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : DBMS mismatch:                1
+2025-02-11T12:32:25.148+06:00  INFO 13240 --- [order-service] [main] liquibase.util                           : Update summary generated
+2025-02-11T12:32:25.149+06:00  INFO 13240 --- [order-service] [main] liquibase.command                        : Update command completed successfully.
+2025-02-11T12:32:25.150+06:00  INFO 13240 --- [order-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-02-11T12:32:25.150+06:00  INFO 13240 --- [order-service] [main] liquibase.command                        : Command execution complete
+2025-02-11T12:32:25.151+06:00  INFO 13240 --- [order-service] [main] o.f.app.engine.impl.AppEngineImpl        : AppEngine default created
+2025-02-11T12:32:25.436+06:00  INFO 13240 --- [order-service] [main] o.f.j.s.i.a.AbstractAsyncExecutor        : Starting up the async job executor [org.flowable.spring.job.service.SpringAsyncExecutor] for engine cmmn
+2025-02-11T12:32:25.443+06:00  INFO 13240 --- [order-service] [Thread-3] o.f.j.s.i.a.ResetExpiredJobsRunnable     : starting to reset expired jobs for engine cmmn
+2025-02-11T12:32:25.444+06:00  INFO 13240 --- [order-service] [main] o.f.j.s.i.a.AbstractAsyncExecutor        : Starting up the async job executor [org.flowable.spring.job.service.SpringAsyncExecutor] for engine bpmn
+2025-02-11T12:32:25.444+06:00  INFO 13240 --- [order-service] [Thread-1] o.f.j.s.i.a.AcquireAsyncJobsDueRunnable  : starting to acquire async jobs due for engine cmmn
+2025-02-11T12:32:25.444+06:00  INFO 13240 --- [order-service] [Thread-2] o.f.j.s.i.a.AcquireTimerJobsRunnable     : starting to acquire async jobs due for engine cmmn
+2025-02-11T12:32:25.445+06:00  INFO 13240 --- [order-service] [Thread-4] o.f.j.s.i.a.AcquireAsyncJobsDueRunnable  : starting to acquire async jobs due for engine bpmn
+2025-02-11T12:32:25.445+06:00  INFO 13240 --- [order-service] [Thread-5] o.f.j.s.i.a.AcquireTimerJobsRunnable     : starting to acquire async jobs due for engine bpmn
+2025-02-11T12:32:25.446+06:00  INFO 13240 --- [order-service] [main] o.f.s.c.DefaultAutoDeploymentStrategy    : Deploying resources [file [D:\Projects\Code\spring-flowable-microservice-event-driven-example\order-service\target\classes\processes\order-saga.bpmn20.xml]] for engine org.flowable.engine.impl.ProcessEngineImpl@76929266 deployment name hint SpringBootAutoDeployment
+2025-02-11T12:32:25.446+06:00  INFO 13240 --- [order-service] [Thread-6] o.f.j.s.i.a.ResetExpiredJobsRunnable     : starting to reset expired jobs for engine bpmn
+2025-02-11T12:32:25.504+06:00 ERROR 13240 --- [order-service] [main] o.f.e.i.b.d.ParsedDeploymentBuilder      : Could not parse resource D:\Projects\Code\spring-flowable-microservice-event-driven-example\order-service\target\classes\processes\order-saga.bpmn20.xml
+
+org.flowable.bpmn.exceptions.XMLException: javax.xml.transform.TransformerException: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: Premature end of file.
+	at org.flowable.bpmn.converter.BpmnXMLConverter.convertToBpmnModel(BpmnXMLConverter.java:281) ~[flowable-bpmn-converter-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.bpmn.parser.BpmnParse.execute(BpmnParse.java:148) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.bpmn.deployer.ParsedDeploymentBuilder.createBpmnParseFromResource(ParsedDeploymentBuilder.java:97) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.bpmn.deployer.ParsedDeploymentBuilder.build(ParsedDeploymentBuilder.java:55) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.bpmn.deployer.BpmnDeployer.deploy(BpmnDeployer.java:78) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.persistence.deploy.DeploymentManager.deploy(DeploymentManager.java:62) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.cmd.DeployCmd.executeDeploy(DeployCmd.java:135) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:70) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:45) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker$1.run(CommandInvoker.java:67) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:140) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:114) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:72) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.BpmnOverrideContextInterceptor.execute(BpmnOverrideContextInterceptor.java:26) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:53) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:105) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.spring.SpringTransactionInterceptor.lambda$execute$0(SpringTransactionInterceptor.java:57) ~[flowable-spring-common-7.0.0.jar:7.0.0]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.2.2.jar:6.2.2]
+	at org.flowable.common.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:57) ~[flowable-spring-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:30) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:56) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:51) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.RepositoryServiceImpl.deploy(RepositoryServiceImpl.java:99) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.repository.DeploymentBuilderImpl.deploy(DeploymentBuilderImpl.java:212) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.spring.configurator.DefaultAutoDeploymentStrategy.deployResourcesInternal(DefaultAutoDeploymentStrategy.java:65) ~[flowable-spring-7.0.0.jar:7.0.0]
+	at org.flowable.spring.configurator.DefaultAutoDeploymentStrategy.deployResourcesInternal(DefaultAutoDeploymentStrategy.java:32) ~[flowable-spring-7.0.0.jar:7.0.0]
+	at org.flowable.common.spring.CommonAutoDeploymentStrategy.deployResources(CommonAutoDeploymentStrategy.java:94) ~[flowable-spring-common-7.0.0.jar:7.0.0]
+	at org.flowable.spring.SpringProcessEngineConfiguration.autoDeployResources(SpringProcessEngineConfiguration.java:132) ~[flowable-spring-7.0.0.jar:7.0.0]
+	at org.flowable.spring.SpringProcessEngineConfiguration.lambda$start$0(SpringProcessEngineConfiguration.java:231) ~[flowable-spring-7.0.0.jar:7.0.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.flowable.spring.SpringProcessEngineConfiguration.start(SpringProcessEngineConfiguration.java:228) ~[flowable-spring-7.0.0.jar:7.0.0]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:323) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:510) ~[spring-context-6.2.2.jar:6.2.2]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:295) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:240) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:1006) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:630) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.2.jar:3.4.2]
+	at halfbloodpro.flowable.order_service.OrderServiceApplication.main(OrderServiceApplication.java:10) ~[classes/:na]
+Caused by: org.xml.sax.SAXException: javax.xml.transform.TransformerException: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.validation.StAXValidatorHelper.validate(StAXValidatorHelper.java:107) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorImpl.validate(ValidatorImpl.java:122) ~[na:na]
+	at java.xml/javax.xml.validation.Validator.validate(Validator.java:124) ~[na:na]
+	at org.flowable.bpmn.converter.BpmnXMLConverter.validateModel(BpmnXMLConverter.java:230) ~[flowable-bpmn-converter-7.0.0.jar:7.0.0]
+	at org.flowable.bpmn.converter.BpmnXMLConverter.convertToBpmnModel(BpmnXMLConverter.java:274) ~[flowable-bpmn-converter-7.0.0.jar:7.0.0]
+	... 44 common frames omitted
+Caused by: javax.xml.transform.TransformerException: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: Premature end of file.
+	at java.xml/com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:793) ~[na:na]
+	at java.xml/com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:395) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.validation.StAXValidatorHelper.validate(StAXValidatorHelper.java:103) ~[na:na]
+	... 48 common frames omitted
+Caused by: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(XMLStreamReaderImpl.java:652) ~[na:na]
+	at java.xml/com.sun.org.apache.xalan.internal.xsltc.trax.StAXStream2SAX.bridge(StAXStream2SAX.java:128) ~[na:na]
+	at java.xml/com.sun.org.apache.xalan.internal.xsltc.trax.StAXStream2SAX.parse(StAXStream2SAX.java:104) ~[na:na]
+	at java.xml/com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transformIdentity(TransformerImpl.java:714) ~[na:na]
+	at java.xml/com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:781) ~[na:na]
+	... 50 common frames omitted
+
+2025-02-11T12:32:25.511+06:00 ERROR 13240 --- [order-service] [main] o.f.c.e.impl.interceptor.CommandContext  : Error while closing command context
+
+org.flowable.bpmn.exceptions.XMLException: javax.xml.transform.TransformerException: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: Premature end of file.
+	at org.flowable.bpmn.converter.BpmnXMLConverter.convertToBpmnModel(BpmnXMLConverter.java:281) ~[flowable-bpmn-converter-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.bpmn.parser.BpmnParse.execute(BpmnParse.java:148) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.bpmn.deployer.ParsedDeploymentBuilder.createBpmnParseFromResource(ParsedDeploymentBuilder.java:97) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.bpmn.deployer.ParsedDeploymentBuilder.build(ParsedDeploymentBuilder.java:55) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.bpmn.deployer.BpmnDeployer.deploy(BpmnDeployer.java:78) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.persistence.deploy.DeploymentManager.deploy(DeploymentManager.java:62) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.cmd.DeployCmd.executeDeploy(DeployCmd.java:135) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:70) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:45) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker$1.run(CommandInvoker.java:67) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:140) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:114) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:72) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.BpmnOverrideContextInterceptor.execute(BpmnOverrideContextInterceptor.java:26) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:53) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:105) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.spring.SpringTransactionInterceptor.lambda$execute$0(SpringTransactionInterceptor.java:57) ~[flowable-spring-common-7.0.0.jar:7.0.0]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.2.2.jar:6.2.2]
+	at org.flowable.common.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:57) ~[flowable-spring-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:30) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:56) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:51) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.RepositoryServiceImpl.deploy(RepositoryServiceImpl.java:99) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.repository.DeploymentBuilderImpl.deploy(DeploymentBuilderImpl.java:212) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.spring.configurator.DefaultAutoDeploymentStrategy.deployResourcesInternal(DefaultAutoDeploymentStrategy.java:65) ~[flowable-spring-7.0.0.jar:7.0.0]
+	at org.flowable.spring.configurator.DefaultAutoDeploymentStrategy.deployResourcesInternal(DefaultAutoDeploymentStrategy.java:32) ~[flowable-spring-7.0.0.jar:7.0.0]
+	at org.flowable.common.spring.CommonAutoDeploymentStrategy.deployResources(CommonAutoDeploymentStrategy.java:94) ~[flowable-spring-common-7.0.0.jar:7.0.0]
+	at org.flowable.spring.SpringProcessEngineConfiguration.autoDeployResources(SpringProcessEngineConfiguration.java:132) ~[flowable-spring-7.0.0.jar:7.0.0]
+	at org.flowable.spring.SpringProcessEngineConfiguration.lambda$start$0(SpringProcessEngineConfiguration.java:231) ~[flowable-spring-7.0.0.jar:7.0.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.flowable.spring.SpringProcessEngineConfiguration.start(SpringProcessEngineConfiguration.java:228) ~[flowable-spring-7.0.0.jar:7.0.0]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:323) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:510) ~[spring-context-6.2.2.jar:6.2.2]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:295) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:240) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:1006) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:630) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.2.jar:3.4.2]
+	at halfbloodpro.flowable.order_service.OrderServiceApplication.main(OrderServiceApplication.java:10) ~[classes/:na]
+Caused by: org.xml.sax.SAXException: javax.xml.transform.TransformerException: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.validation.StAXValidatorHelper.validate(StAXValidatorHelper.java:107) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorImpl.validate(ValidatorImpl.java:122) ~[na:na]
+	at java.xml/javax.xml.validation.Validator.validate(Validator.java:124) ~[na:na]
+	at org.flowable.bpmn.converter.BpmnXMLConverter.validateModel(BpmnXMLConverter.java:230) ~[flowable-bpmn-converter-7.0.0.jar:7.0.0]
+	at org.flowable.bpmn.converter.BpmnXMLConverter.convertToBpmnModel(BpmnXMLConverter.java:274) ~[flowable-bpmn-converter-7.0.0.jar:7.0.0]
+	... 44 common frames omitted
+Caused by: javax.xml.transform.TransformerException: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: Premature end of file.
+	at java.xml/com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:793) ~[na:na]
+	at java.xml/com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:395) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.validation.StAXValidatorHelper.validate(StAXValidatorHelper.java:103) ~[na:na]
+	... 48 common frames omitted
+Caused by: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(XMLStreamReaderImpl.java:652) ~[na:na]
+	at java.xml/com.sun.org.apache.xalan.internal.xsltc.trax.StAXStream2SAX.bridge(StAXStream2SAX.java:128) ~[na:na]
+	at java.xml/com.sun.org.apache.xalan.internal.xsltc.trax.StAXStream2SAX.parse(StAXStream2SAX.java:104) ~[na:na]
+	at java.xml/com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transformIdentity(TransformerImpl.java:714) ~[na:na]
+	at java.xml/com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:781) ~[na:na]
+	... 50 common frames omitted
+
+2025-02-11T12:32:25.517+06:00  WARN 13240 --- [order-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'springProcessEngineConfiguration'
+2025-02-11T12:32:25.519+06:00  INFO 13240 --- [order-service] [main] o.f.j.s.i.a.AbstractAsyncExecutor        : Shutting down the async job executor [org.flowable.spring.job.service.SpringAsyncExecutor] for engine cmmn
+2025-02-11T12:32:25.519+06:00  INFO 13240 --- [order-service] [flowable-cmmn-acquire-async-jobs] o.f.j.s.i.a.AcquireAsyncJobsDueRunnable  : stopped async job due acquisition for engine cmmn
+2025-02-11T12:32:25.519+06:00  INFO 13240 --- [order-service] [flowable-cmmn-reset-expired-jobs] o.f.j.s.i.a.ResetExpiredJobsRunnable     : stopped resetting expired jobs for engine cmmn
+2025-02-11T12:32:25.519+06:00  INFO 13240 --- [order-service] [flowable-cmmn-acquire-timer-jobs] o.f.j.s.i.a.AcquireTimerJobsRunnable     : stopped async job due acquisition for engine cmmn
+2025-02-11T12:32:25.522+06:00  INFO 13240 --- [order-service] [main] o.f.j.s.i.a.AbstractAsyncExecutor        : Shutting down the async job executor [org.flowable.spring.job.service.SpringAsyncExecutor] for engine bpmn
+2025-02-11T12:32:25.522+06:00  INFO 13240 --- [order-service] [flowable-bpmn-acquire-async-jobs] o.f.j.s.i.a.AcquireAsyncJobsDueRunnable  : stopped async job due acquisition for engine bpmn
+2025-02-11T12:32:25.522+06:00  INFO 13240 --- [order-service] [flowable-bpmn-acquire-timer-jobs] o.f.j.s.i.a.AcquireTimerJobsRunnable     : stopped async job due acquisition for engine bpmn
+2025-02-11T12:32:25.522+06:00  INFO 13240 --- [order-service] [flowable-bpmn-reset-expired-jobs] o.f.j.s.i.a.ResetExpiredJobsRunnable     : stopped resetting expired jobs for engine bpmn
+2025-02-11T12:32:25.525+06:00  INFO 13240 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T12:32:25.526+06:00  INFO 13240 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T12:32:25.533+06:00  INFO 13240 --- [order-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-02-11T12:32:25.543+06:00 ERROR 13240 --- [order-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Failed to start bean 'springProcessEngineConfiguration'
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:326) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:510) ~[spring-context-6.2.2.jar:6.2.2]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:295) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:240) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:1006) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:630) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.2.jar:3.4.2]
+	at halfbloodpro.flowable.order_service.OrderServiceApplication.main(OrderServiceApplication.java:10) ~[classes/:na]
+Caused by: org.flowable.bpmn.exceptions.XMLException: javax.xml.transform.TransformerException: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: Premature end of file.
+	at org.flowable.bpmn.converter.BpmnXMLConverter.convertToBpmnModel(BpmnXMLConverter.java:281) ~[flowable-bpmn-converter-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.bpmn.parser.BpmnParse.execute(BpmnParse.java:148) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.bpmn.deployer.ParsedDeploymentBuilder.createBpmnParseFromResource(ParsedDeploymentBuilder.java:97) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.bpmn.deployer.ParsedDeploymentBuilder.build(ParsedDeploymentBuilder.java:55) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.bpmn.deployer.BpmnDeployer.deploy(BpmnDeployer.java:78) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.persistence.deploy.DeploymentManager.deploy(DeploymentManager.java:62) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.cmd.DeployCmd.executeDeploy(DeployCmd.java:135) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:70) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:45) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker$1.run(CommandInvoker.java:67) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:140) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:114) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:72) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.BpmnOverrideContextInterceptor.execute(BpmnOverrideContextInterceptor.java:26) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:53) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:105) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.spring.SpringTransactionInterceptor.lambda$execute$0(SpringTransactionInterceptor.java:57) ~[flowable-spring-common-7.0.0.jar:7.0.0]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.2.2.jar:6.2.2]
+	at org.flowable.common.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:57) ~[flowable-spring-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:30) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:56) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:51) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.RepositoryServiceImpl.deploy(RepositoryServiceImpl.java:99) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.repository.DeploymentBuilderImpl.deploy(DeploymentBuilderImpl.java:212) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.spring.configurator.DefaultAutoDeploymentStrategy.deployResourcesInternal(DefaultAutoDeploymentStrategy.java:65) ~[flowable-spring-7.0.0.jar:7.0.0]
+	at org.flowable.spring.configurator.DefaultAutoDeploymentStrategy.deployResourcesInternal(DefaultAutoDeploymentStrategy.java:32) ~[flowable-spring-7.0.0.jar:7.0.0]
+	at org.flowable.common.spring.CommonAutoDeploymentStrategy.deployResources(CommonAutoDeploymentStrategy.java:94) ~[flowable-spring-common-7.0.0.jar:7.0.0]
+	at org.flowable.spring.SpringProcessEngineConfiguration.autoDeployResources(SpringProcessEngineConfiguration.java:132) ~[flowable-spring-7.0.0.jar:7.0.0]
+	at org.flowable.spring.SpringProcessEngineConfiguration.lambda$start$0(SpringProcessEngineConfiguration.java:231) ~[flowable-spring-7.0.0.jar:7.0.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.flowable.spring.SpringProcessEngineConfiguration.start(SpringProcessEngineConfiguration.java:228) ~[flowable-spring-7.0.0.jar:7.0.0]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:323) ~[spring-context-6.2.2.jar:6.2.2]
+	... 13 common frames omitted
+Caused by: org.xml.sax.SAXException: javax.xml.transform.TransformerException: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.validation.StAXValidatorHelper.validate(StAXValidatorHelper.java:107) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorImpl.validate(ValidatorImpl.java:122) ~[na:na]
+	at java.xml/javax.xml.validation.Validator.validate(Validator.java:124) ~[na:na]
+	at org.flowable.bpmn.converter.BpmnXMLConverter.validateModel(BpmnXMLConverter.java:230) ~[flowable-bpmn-converter-7.0.0.jar:7.0.0]
+	at org.flowable.bpmn.converter.BpmnXMLConverter.convertToBpmnModel(BpmnXMLConverter.java:274) ~[flowable-bpmn-converter-7.0.0.jar:7.0.0]
+	... 44 common frames omitted
+Caused by: javax.xml.transform.TransformerException: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: Premature end of file.
+	at java.xml/com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:793) ~[na:na]
+	at java.xml/com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:395) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.validation.StAXValidatorHelper.validate(StAXValidatorHelper.java:103) ~[na:na]
+	... 48 common frames omitted
+Caused by: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(XMLStreamReaderImpl.java:652) ~[na:na]
+	at java.xml/com.sun.org.apache.xalan.internal.xsltc.trax.StAXStream2SAX.bridge(StAXStream2SAX.java:128) ~[na:na]
+	at java.xml/com.sun.org.apache.xalan.internal.xsltc.trax.StAXStream2SAX.parse(StAXStream2SAX.java:104) ~[na:na]
+	at java.xml/com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transformIdentity(TransformerImpl.java:714) ~[na:na]
+	at java.xml/com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:781) ~[na:na]
+	... 50 common frames omitted
+
+2025-02-11T12:34:14.122+06:00  INFO 23520 --- [order-service] [main] h.f.o.OrderServiceApplication            : Starting OrderServiceApplication using Java 21.0.6 with PID 23520 (D:\Projects\Code\spring-flowable-microservice-event-driven-example\order-service\target\classes started by anirudhya.sarker in D:\Projects\Code\spring-flowable-microservice-event-driven-example\order-service)
+2025-02-11T12:34:14.122+06:00  INFO 23520 --- [order-service] [main] h.f.o.OrderServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T12:34:14.772+06:00  INFO 23520 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-11T12:34:14.789+06:00  INFO 23520 --- [order-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-11T12:34:14.793+06:00  INFO 23520 --- [order-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-11T12:34:14.839+06:00  INFO 23520 --- [order-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-11T12:34:14.839+06:00  INFO 23520 --- [order-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 676 ms
+2025-02-11T12:34:15.059+06:00  INFO 23520 --- [order-service] [main] o.f.s.b.c.CmmnEngineAutoConfiguration    : No deployment resources were found for autodeployment
+2025-02-11T12:34:15.094+06:00  INFO 23520 --- [order-service] [main] o.f.s.b.dmn.DmnEngineAutoConfiguration   : No deployment resources were found for autodeployment
+2025-02-11T12:34:15.116+06:00  INFO 23520 --- [order-service] [main] o.f.s.b.e.EventRegistryAutoConfiguration : No deployment resources were found for autodeployment
+2025-02-11T12:34:15.172+06:00  INFO 23520 --- [order-service] [main] o.f.s.b.app.AppEngineAutoConfiguration   : No deployment resources were found for autodeployment
+2025-02-11T12:34:15.187+06:00  INFO 23520 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Found 5 Engine Configurators in total:
+2025-02-11T12:34:15.189+06:00  INFO 23520 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.engine.spring.configurator.SpringProcessEngineConfigurator (priority:50000)
+2025-02-11T12:34:15.189+06:00  INFO 23520 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.eventregistry.spring.configurator.SpringEventRegistryConfigurator (priority:100000)
+2025-02-11T12:34:15.189+06:00  INFO 23520 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.idm.spring.configurator.SpringIdmEngineConfigurator (priority:150000)
+2025-02-11T12:34:15.189+06:00  INFO 23520 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.dmn.spring.configurator.SpringDmnEngineConfigurator (priority:200000)
+2025-02-11T12:34:15.189+06:00  INFO 23520 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : class org.flowable.cmmn.spring.configurator.SpringCmmnEngineConfigurator (priority:500000)
+2025-02-11T12:34:15.189+06:00  INFO 23520 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.engine.spring.configurator.SpringProcessEngineConfigurator (priority:50000)
+2025-02-11T12:34:15.210+06:00  INFO 23520 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.eventregistry.spring.configurator.SpringEventRegistryConfigurator (priority:100000)
+2025-02-11T12:34:15.213+06:00  INFO 23520 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.idm.spring.configurator.SpringIdmEngineConfigurator (priority:150000)
+2025-02-11T12:34:15.217+06:00  INFO 23520 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.dmn.spring.configurator.SpringDmnEngineConfigurator (priority:200000)
+2025-02-11T12:34:15.220+06:00  INFO 23520 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing beforeInit() of class org.flowable.cmmn.spring.configurator.SpringCmmnEngineConfigurator (priority:500000)
+2025-02-11T12:34:15.233+06:00  INFO 23520 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T12:34:15.330+06:00  INFO 23520 --- [order-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:686196cd-3b4f-4546-94f8-39a2c6dc532d user=SA
+2025-02-11T12:34:15.339+06:00  INFO 23520 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T12:34:15.865+06:00  INFO 23520 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.engine.spring.configurator.SpringProcessEngineConfigurator (priority:50000)
+2025-02-11T12:34:15.955+06:00  INFO 23520 --- [order-service] [main] o.f.c.e.impl.db.CommonDbSchemaManager    : performing create on common with resource org/flowable/common/db/create/flowable.h2.create.common.sql
+2025-02-11T12:34:15.963+06:00  INFO 23520 --- [order-service] [main] o.f.i.s.i.d.IdentityLinkDbSchemaManager  : performing create on identitylink with resource org/flowable/identitylink/service/db/create/flowable.h2.create.identitylink.sql
+2025-02-11T12:34:15.966+06:00  INFO 23520 --- [order-service] [main] o.f.i.s.i.d.IdentityLinkDbSchemaManager  : performing create on identitylink.history with resource org/flowable/identitylink/service/db/create/flowable.h2.create.identitylink.history.sql
+2025-02-11T12:34:15.970+06:00  INFO 23520 --- [order-service] [main] o.f.e.s.i.db.EntityLinkDbSchemaManager   : performing create on entitylink with resource org/flowable/entitylink/service/db/create/flowable.h2.create.entitylink.sql
+2025-02-11T12:34:15.971+06:00  INFO 23520 --- [order-service] [main] o.f.e.s.i.db.EntityLinkDbSchemaManager   : performing create on entitylink.history with resource org/flowable/entitylink/service/db/create/flowable.h2.create.entitylink.history.sql
+2025-02-11T12:34:15.971+06:00  INFO 23520 --- [order-service] [main] e.s.i.d.EventSubscriptionDbSchemaManager : performing create on eventsubscription with resource org/flowable/eventsubscription/service/db/create/flowable.h2.create.eventsubscription.sql
+2025-02-11T12:34:15.971+06:00  INFO 23520 --- [order-service] [main] o.f.t.s.impl.db.TaskDbSchemaManager      : performing create on task with resource org/flowable/task/service/db/create/flowable.h2.create.task.sql
+2025-02-11T12:34:15.971+06:00  INFO 23520 --- [order-service] [main] o.f.t.s.impl.db.TaskDbSchemaManager      : performing create on task.history with resource org/flowable/task/service/db/create/flowable.h2.create.task.history.sql
+2025-02-11T12:34:15.987+06:00  INFO 23520 --- [order-service] [main] o.f.v.s.impl.db.VariableDbSchemaManager  : performing create on variable with resource org/flowable/variable/service/db/create/flowable.h2.create.variable.sql
+2025-02-11T12:34:15.991+06:00  INFO 23520 --- [order-service] [main] o.f.v.s.impl.db.VariableDbSchemaManager  : performing create on variable.history with resource org/flowable/variable/service/db/create/flowable.h2.create.variable.history.sql
+2025-02-11T12:34:15.991+06:00  INFO 23520 --- [order-service] [main] o.f.j.s.impl.db.JobDbSchemaManager       : performing create on job with resource org/flowable/job/service/db/create/flowable.h2.create.job.sql
+2025-02-11T12:34:16.021+06:00  INFO 23520 --- [order-service] [main] o.f.b.s.impl.db.BatchDbSchemaManager     : performing create on batch with resource org/flowable/batch/service/db/create/flowable.h2.create.batch.sql
+2025-02-11T12:34:16.021+06:00  INFO 23520 --- [order-service] [main] o.f.e.impl.db.ProcessDbSchemaManager     : performing create on engine with resource org/flowable/db/create/flowable.h2.create.engine.sql
+2025-02-11T12:34:16.066+06:00  INFO 23520 --- [order-service] [main] o.f.e.impl.db.ProcessDbSchemaManager     : performing create on history with resource org/flowable/db/create/flowable.h2.create.history.sql
+2025-02-11T12:34:16.071+06:00  INFO 23520 --- [order-service] [main] o.f.engine.impl.ProcessEngineImpl        : ProcessEngine default created
+2025-02-11T12:34:16.095+06:00  INFO 23520 --- [order-service] [main] o.f.e.impl.cmd.ValidateV5EntitiesCmd     : Total of v5 deployments found: 0
+2025-02-11T12:34:16.106+06:00  INFO 23520 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.eventregistry.spring.configurator.SpringEventRegistryConfigurator (priority:100000)
+2025-02-11T12:34:16.160+06:00  INFO 23520 --- [order-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-02-11T12:34:16.388+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.FLW_EV_DATABASECHANGELOG
+2025-02-11T12:34:16.443+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Reading from PUBLIC.FLW_EV_DATABASECHANGELOG
+2025-02-11T12:34:16.496+06:00  INFO 23520 --- [order-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-02-11T12:34:16.496+06:00  INFO 23520 --- [order-service] [main] liquibase.command                        : Using deploymentId: 9255656496
+2025-02-11T12:34:16.496+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Reading from PUBLIC.FLW_EV_DATABASECHANGELOG
+2025-02-11T12:34:16.521+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table FLW_EVENT_DEPLOYMENT created
+2025-02-11T12:34:16.521+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table FLW_EVENT_RESOURCE created
+2025-02-11T12:34:16.521+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table FLW_EVENT_DEFINITION created
+2025-02-11T12:34:16.521+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_EVENT_DEF_UNIQ created
+2025-02-11T12:34:16.536+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table FLW_CHANNEL_DEFINITION created
+2025-02-11T12:34:16.539+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_CHANNEL_DEF_UNIQ created
+2025-02-11T12:34:16.539+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/eventregistry/db/liquibase/flowable-eventregistry-db-changelog.xml::1::flowable ran successfully in 18ms
+2025-02-11T12:34:16.539+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns TYPE_(varchar(255)) added to FLW_CHANNEL_DEFINITION
+2025-02-11T12:34:16.539+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns IMPLEMENTATION_(varchar(255)) added to FLW_CHANNEL_DEFINITION
+2025-02-11T12:34:16.539+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/eventregistry/db/liquibase/flowable-eventregistry-db-changelog.xml::2::flowable ran successfully in 0ms
+2025-02-11T12:34:16.557+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Set Channel Definition type and implementation columns
+2025-02-11T12:34:16.558+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/eventregistry/db/liquibase/flowable-eventregistry-db-changelog.xml::3::flowable ran successfully in 19ms
+2025-02-11T12:34:16.562+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : UPDATE SUMMARY
+2025-02-11T12:34:16.562+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Run:                          3
+2025-02-11T12:34:16.562+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Previously run:               0
+2025-02-11T12:34:16.563+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Filtered out:                 0
+2025-02-11T12:34:16.563+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : -------------------------------
+2025-02-11T12:34:16.563+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Total change sets:            3
+2025-02-11T12:34:16.563+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Update summary generated
+2025-02-11T12:34:16.566+06:00  INFO 23520 --- [order-service] [main] liquibase.command                        : Update command completed successfully.
+2025-02-11T12:34:16.567+06:00  INFO 23520 --- [order-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-02-11T12:34:16.567+06:00  INFO 23520 --- [order-service] [main] liquibase.command                        : Command execution complete
+2025-02-11T12:34:16.568+06:00  INFO 23520 --- [order-service] [main] o.f.e.impl.EventRegistryEngineImpl       : EventRegistryEngine default created
+2025-02-11T12:34:16.569+06:00  INFO 23520 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.idm.spring.configurator.SpringIdmEngineConfigurator (priority:150000)
+2025-02-11T12:34:16.571+06:00  INFO 23520 --- [order-service] [main] o.f.i.engine.impl.db.IdmDbSchemaManager  : performing create on identity with resource org/flowable/idm/db/create/flowable.h2.create.identity.sql
+2025-02-11T12:34:16.571+06:00  INFO 23520 --- [order-service] [main] o.f.idm.engine.impl.IdmEngineImpl        : IdmEngine default created
+2025-02-11T12:34:16.571+06:00  INFO 23520 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.dmn.spring.configurator.SpringDmnEngineConfigurator (priority:200000)
+2025-02-11T12:34:16.580+06:00  INFO 23520 --- [order-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-02-11T12:34:16.597+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.ACT_DMN_DATABASECHANGELOG
+2025-02-11T12:34:16.597+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_DMN_DATABASECHANGELOG
+2025-02-11T12:34:16.618+06:00  INFO 23520 --- [order-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-02-11T12:34:16.619+06:00  INFO 23520 --- [order-service] [main] liquibase.command                        : Using deploymentId: 9255656618
+2025-02-11T12:34:16.619+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_DMN_DATABASECHANGELOG
+2025-02-11T12:34:16.621+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table ACT_DMN_DEPLOYMENT created
+2025-02-11T12:34:16.621+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table ACT_DMN_DEPLOYMENT_RESOURCE created
+2025-02-11T12:34:16.621+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table ACT_DMN_DECISION_TABLE created
+2025-02-11T12:34:16.621+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::1::activiti ran successfully in 0ms
+2025-02-11T12:34:16.636+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table ACT_DMN_HI_DECISION_EXECUTION created
+2025-02-11T12:34:16.636+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::2::flowable ran successfully in 15ms
+2025-02-11T12:34:16.640+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns SCOPE_TYPE_(varchar(255)) added to ACT_DMN_HI_DECISION_EXECUTION
+2025-02-11T12:34:16.644+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::3::flowable ran successfully in 0ms
+2025-02-11T12:34:16.646+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Column ACT_DMN_DECISION_TABLE.PARENT_DEPLOYMENT_ID_ dropped
+2025-02-11T12:34:16.646+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::4::flowable ran successfully in 0ms
+2025-02-11T12:34:16.650+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_DEC_TBL_UNIQ created
+2025-02-11T12:34:16.650+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::6::flowable ran successfully in 0ms
+2025-02-11T12:34:16.650+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_DEC_TBL_UNIQ dropped from table ACT_DMN_DECISION_TABLE
+2025-02-11T12:34:16.654+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table ACT_DMN_DECISION_TABLE renamed to ACT_DMN_DECISION
+2025-02-11T12:34:16.655+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_DMN_DEC_UNIQ created
+2025-02-11T12:34:16.655+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::7::flowable ran successfully in 5ms
+2025-02-11T12:34:16.659+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns DECISION_TYPE_(varchar(255)) added to ACT_DMN_DECISION
+2025-02-11T12:34:16.659+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::8::flowable ran successfully in 3ms
+2025-02-11T12:34:16.660+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_DMN_INSTANCE_ID created
+2025-02-11T12:34:16.661+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/dmn/db/liquibase/flowable-dmn-db-changelog.xml::9::flowable ran successfully in 1ms
+2025-02-11T12:34:16.664+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : UPDATE SUMMARY
+2025-02-11T12:34:16.664+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Run:                          8
+2025-02-11T12:34:16.664+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Previously run:               0
+2025-02-11T12:34:16.664+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Filtered out:                 1
+2025-02-11T12:34:16.665+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : -------------------------------
+2025-02-11T12:34:16.665+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Total change sets:            9
+2025-02-11T12:34:16.665+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : FILTERED CHANGE SETS SUMMARY
+2025-02-11T12:34:16.665+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : DBMS mismatch:                1
+2025-02-11T12:34:16.666+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Update summary generated
+2025-02-11T12:34:16.667+06:00  INFO 23520 --- [order-service] [main] liquibase.command                        : Update command completed successfully.
+2025-02-11T12:34:16.668+06:00  INFO 23520 --- [order-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-02-11T12:34:16.668+06:00  INFO 23520 --- [order-service] [main] liquibase.command                        : Command execution complete
+2025-02-11T12:34:16.668+06:00  INFO 23520 --- [order-service] [main] o.f.dmn.engine.impl.DmnEngineImpl        : DmnEngine default created
+2025-02-11T12:34:16.669+06:00  INFO 23520 --- [order-service] [main] o.f.a.s.SpringAppEngineConfiguration     : Executing configure() of class org.flowable.cmmn.spring.configurator.SpringCmmnEngineConfigurator (priority:500000)
+2025-02-11T12:34:16.706+06:00  INFO 23520 --- [order-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-02-11T12:34:16.722+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.ACT_CMMN_DATABASECHANGELOG
+2025-02-11T12:34:16.722+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_CMMN_DATABASECHANGELOG
+2025-02-11T12:34:16.765+06:00  INFO 23520 --- [order-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-02-11T12:34:16.766+06:00  INFO 23520 --- [order-service] [main] liquibase.command                        : Using deploymentId: 9255656766
+2025-02-11T12:34:16.767+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_CMMN_DATABASECHANGELOG
+2025-02-11T12:34:16.784+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_DEPLOYMENT created
+2025-02-11T12:34:16.784+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_DEPLOYMENT_RESOURCE created
+2025-02-11T12:34:16.787+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_DEPLOYMENT_RESOURCE (DEPLOYMENT_ID_)
+2025-02-11T12:34:16.787+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_CMMN_RSRC_DPL created
+2025-02-11T12:34:16.788+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_CASEDEF created
+2025-02-11T12:34:16.788+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_CASEDEF (DEPLOYMENT_ID_)
+2025-02-11T12:34:16.788+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_DEF_DPLY created
+2025-02-11T12:34:16.788+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_RU_CASE_INST created
+2025-02-11T12:34:16.788+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_CASE_INST (CASE_DEF_ID_)
+2025-02-11T12:34:16.788+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_INST_CASE_DEF created
+2025-02-11T12:34:16.788+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_INST_PARENT created
+2025-02-11T12:34:16.788+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_RU_PLAN_ITEM_INST created
+2025-02-11T12:34:16.788+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_PLAN_ITEM_INST (CASE_DEF_ID_)
+2025-02-11T12:34:16.788+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_PLAN_ITEM_CASE_DEF created
+2025-02-11T12:34:16.788+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_PLAN_ITEM_INST (CASE_INST_ID_)
+2025-02-11T12:34:16.788+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_PLAN_ITEM_CASE_INST created
+2025-02-11T12:34:16.788+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_RU_SENTRY_PART_INST created
+2025-02-11T12:34:16.788+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_SENTRY_PART_INST (CASE_DEF_ID_)
+2025-02-11T12:34:16.788+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_SENTRY_CASE_DEF created
+2025-02-11T12:34:16.788+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_SENTRY_PART_INST (CASE_INST_ID_)
+2025-02-11T12:34:16.804+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_SENTRY_CASE_INST created
+2025-02-11T12:34:16.805+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_SENTRY_PART_INST (PLAN_ITEM_INST_ID_)
+2025-02-11T12:34:16.806+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_SENTRY_PLAN_ITEM created
+2025-02-11T12:34:16.808+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_RU_MIL_INST created
+2025-02-11T12:34:16.809+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_MIL_INST (CASE_DEF_ID_)
+2025-02-11T12:34:16.810+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_MIL_CASE_DEF created
+2025-02-11T12:34:16.811+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_CMMN_RU_MIL_INST (CASE_INST_ID_)
+2025-02-11T12:34:16.811+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_MIL_CASE_INST created
+2025-02-11T12:34:16.812+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_HI_CASE_INST created
+2025-02-11T12:34:16.813+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_HI_MIL_INST created
+2025-02-11T12:34:16.814+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::1::flowable ran successfully in 43ms
+2025-02-11T12:34:16.820+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns DGRM_RESOURCE_NAME_(varchar(4000)),HAS_START_FORM_KEY_(boolean) added to ACT_CMMN_CASEDEF
+2025-02-11T12:34:16.821+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns GENERATED_(boolean) added to ACT_CMMN_DEPLOYMENT_RESOURCE
+2025-02-11T12:34:16.821+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns LOCK_TIME_(datetime) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:34:16.821+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns ITEM_DEFINITION_ID_(varchar(255)),ITEM_DEFINITION_TYPE_(varchar(255)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:34:16.821+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::2::flowable ran successfully in 5ms
+2025-02-11T12:34:16.821+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns IS_COMPLETEABLE_(boolean) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:34:16.821+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns IS_COMPLETEABLE_(boolean) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:34:16.821+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_PLAN_ITEM_STAGE_INST created
+2025-02-11T12:34:16.821+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns IS_COUNT_ENABLED_(boolean) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:34:16.836+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns VAR_COUNT_(integer) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:34:16.838+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns SENTRY_PART_INST_COUNT_(integer) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:34:16.838+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::3::flowable ran successfully in 17ms
+2025-02-11T12:34:16.838+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table ACT_CMMN_HI_PLAN_ITEM_INST created
+2025-02-11T12:34:16.838+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns TENANT_ID_(varchar(255)) added to ACT_CMMN_RU_MIL_INST
+2025-02-11T12:34:16.848+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns TENANT_ID_(varchar(255)) added to ACT_CMMN_HI_MIL_INST
+2025-02-11T12:34:16.848+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::4::flowable ran successfully in 10ms
+2025-02-11T12:34:16.848+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_DEF_UNIQ created
+2025-02-11T12:34:16.848+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::6::flowable ran successfully in 0ms
+2025-02-11T12:34:16.848+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Column ACT_CMMN_RU_PLAN_ITEM_INST.START_TIME_ renamed to CREATE_TIME_
+2025-02-11T12:34:16.848+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Column ACT_CMMN_HI_PLAN_ITEM_INST.CREATED_TIME_ renamed to CREATE_TIME_
+2025-02-11T12:34:16.871+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns LAST_AVAILABLE_TIME_(datetime(3)),LAST_ENABLED_TIME_(datetime(3)),LAST_DISABLED_TIME_(datetime(3)),LAST_STARTED_TIME_(datetime(3)),LAST_SUSPENDED_TIME_(datetime(3)),COMPLETED_TIME_(datetime(3)),OCCURRED_TIME_(datetime(3)),TERMINATED_TIME_(datetime(3)),EXIT_TIME_(datetime(3)),ENDED_TIME_(datetime(3)),ENTRY_CRITERION_ID_(varchar(255)),EXIT_CRITERION_ID_(varchar(255)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:34:16.871+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns ENTRY_CRITERION_ID_(varchar(255)),EXIT_CRITERION_ID_(varchar(255)) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:34:16.871+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::7::flowable ran successfully in 23ms
+2025-02-11T12:34:16.871+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns SHOW_IN_OVERVIEW_(boolean) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:34:16.871+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::8::flowable ran successfully in 0ms
+2025-02-11T12:34:16.871+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns EXTRA_VALUE_(varchar(255)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:34:16.871+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns EXTRA_VALUE_(varchar(255)) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:34:16.871+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::9::flowable ran successfully in 0ms
+2025-02-11T12:34:16.871+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns REFERENCE_ID_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:34:16.871+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns REFERENCE_TYPE_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:34:16.887+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_CASE_INST_REF_ID_ created
+2025-02-11T12:34:16.888+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns REFERENCE_ID_(varchar(255)) added to ACT_CMMN_HI_CASE_INST
+2025-02-11T12:34:16.889+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns REFERENCE_TYPE_(varchar(255)) added to ACT_CMMN_HI_CASE_INST
+2025-02-11T12:34:16.889+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::10::flowable ran successfully in 18ms
+2025-02-11T12:34:16.893+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns DERIVED_CASE_DEF_ID_(varchar(255)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:34:16.893+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns DERIVED_CASE_DEF_ID_(varchar(255)) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:34:16.893+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::11::flowable ran successfully in 4ms
+2025-02-11T12:34:16.897+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns LOCK_OWNER_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:34:16.897+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::12::flowable ran successfully in 4ms
+2025-02-11T12:34:16.900+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns LAST_UNAVAILABLE_TIME_(datetime(3)) added to ACT_CMMN_RU_PLAN_ITEM_INST
+2025-02-11T12:34:16.900+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns LAST_UNAVAILABLE_TIME_(datetime(3)) added to ACT_CMMN_HI_PLAN_ITEM_INST
+2025-02-11T12:34:16.904+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::13::flowable ran successfully in 4ms
+2025-02-11T12:34:16.908+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns LAST_REACTIVATION_TIME_(datetime(3)),LAST_REACTIVATION_USER_ID_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:34:16.909+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns LAST_REACTIVATION_TIME_(datetime(3)),LAST_REACTIVATION_USER_ID_(varchar(255)) added to ACT_CMMN_HI_CASE_INST
+2025-02-11T12:34:16.911+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::14::flowable ran successfully in 7ms
+2025-02-11T12:34:16.912+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns BUSINESS_STATUS_(varchar(255)) added to ACT_CMMN_RU_CASE_INST
+2025-02-11T12:34:16.913+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Columns BUSINESS_STATUS_(varchar(255)) added to ACT_CMMN_HI_CASE_INST
+2025-02-11T12:34:16.915+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::16::flowable ran successfully in 3ms
+2025-02-11T12:34:16.916+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_HI_CASE_INST_END created
+2025-02-11T12:34:16.916+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/cmmn/db/liquibase/flowable-cmmn-db-changelog.xml::17::flowable ran successfully in 0ms
+2025-02-11T12:34:16.918+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : UPDATE SUMMARY
+2025-02-11T12:34:16.918+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Run:                         15
+2025-02-11T12:34:16.918+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Previously run:               0
+2025-02-11T12:34:16.918+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Filtered out:                 2
+2025-02-11T12:34:16.918+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : -------------------------------
+2025-02-11T12:34:16.918+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Total change sets:           17
+2025-02-11T12:34:16.918+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : FILTERED CHANGE SETS SUMMARY
+2025-02-11T12:34:16.919+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : DBMS mismatch:                2
+2025-02-11T12:34:16.919+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Update summary generated
+2025-02-11T12:34:16.920+06:00  INFO 23520 --- [order-service] [main] liquibase.command                        : Update command completed successfully.
+2025-02-11T12:34:16.921+06:00  INFO 23520 --- [order-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-02-11T12:34:16.921+06:00  INFO 23520 --- [order-service] [main] liquibase.command                        : Command execution complete
+2025-02-11T12:34:16.921+06:00  INFO 23520 --- [order-service] [main] o.f.cmmn.engine.impl.CmmnEngineImpl      : CmmnEngine default created
+2025-02-11T12:34:16.922+06:00  INFO 23520 --- [order-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-02-11T12:34:16.940+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.ACT_APP_DATABASECHANGELOG
+2025-02-11T12:34:16.940+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_APP_DATABASECHANGELOG
+2025-02-11T12:34:16.958+06:00  INFO 23520 --- [order-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-02-11T12:34:16.960+06:00  INFO 23520 --- [order-service] [main] liquibase.command                        : Using deploymentId: 9255656960
+2025-02-11T12:34:16.960+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Reading from PUBLIC.ACT_APP_DATABASECHANGELOG
+2025-02-11T12:34:16.965+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table ACT_APP_DEPLOYMENT created
+2025-02-11T12:34:16.966+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table ACT_APP_DEPLOYMENT_RESOURCE created
+2025-02-11T12:34:16.967+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_APP_DEPLOYMENT_RESOURCE (DEPLOYMENT_ID_)
+2025-02-11T12:34:16.968+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_APP_RSRC_DPL created
+2025-02-11T12:34:16.969+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Table ACT_APP_APPDEF created
+2025-02-11T12:34:16.969+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Foreign key constraint added to ACT_APP_APPDEF (DEPLOYMENT_ID_)
+2025-02-11T12:34:16.969+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_APP_DEF_DPLY created
+2025-02-11T12:34:16.970+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/app/db/liquibase/flowable-app-db-changelog.xml::1::flowable ran successfully in 7ms
+2025-02-11T12:34:16.971+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : Index ACT_IDX_APP_DEF_UNIQ created
+2025-02-11T12:34:16.972+06:00  INFO 23520 --- [order-service] [main] liquibase.changelog                      : ChangeSet org/flowable/app/db/liquibase/flowable-app-db-changelog.xml::3::flowable ran successfully in 1ms
+2025-02-11T12:34:16.972+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : UPDATE SUMMARY
+2025-02-11T12:34:16.972+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Run:                          2
+2025-02-11T12:34:16.972+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Previously run:               0
+2025-02-11T12:34:16.972+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Filtered out:                 1
+2025-02-11T12:34:16.972+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : -------------------------------
+2025-02-11T12:34:16.972+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Total change sets:            3
+2025-02-11T12:34:16.972+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : FILTERED CHANGE SETS SUMMARY
+2025-02-11T12:34:16.972+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : DBMS mismatch:                1
+2025-02-11T12:34:16.972+06:00  INFO 23520 --- [order-service] [main] liquibase.util                           : Update summary generated
+2025-02-11T12:34:16.972+06:00  INFO 23520 --- [order-service] [main] liquibase.command                        : Update command completed successfully.
+2025-02-11T12:34:16.972+06:00  INFO 23520 --- [order-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-02-11T12:34:16.972+06:00  INFO 23520 --- [order-service] [main] liquibase.command                        : Command execution complete
+2025-02-11T12:34:16.972+06:00  INFO 23520 --- [order-service] [main] o.f.app.engine.impl.AppEngineImpl        : AppEngine default created
+2025-02-11T12:34:17.206+06:00  INFO 23520 --- [order-service] [main] o.f.j.s.i.a.AbstractAsyncExecutor        : Starting up the async job executor [org.flowable.spring.job.service.SpringAsyncExecutor] for engine cmmn
+2025-02-11T12:34:17.212+06:00  INFO 23520 --- [order-service] [Thread-3] o.f.j.s.i.a.ResetExpiredJobsRunnable     : starting to reset expired jobs for engine cmmn
+2025-02-11T12:34:17.212+06:00  INFO 23520 --- [order-service] [main] o.f.j.s.i.a.AbstractAsyncExecutor        : Starting up the async job executor [org.flowable.spring.job.service.SpringAsyncExecutor] for engine bpmn
+2025-02-11T12:34:17.212+06:00  INFO 23520 --- [order-service] [Thread-1] o.f.j.s.i.a.AcquireAsyncJobsDueRunnable  : starting to acquire async jobs due for engine cmmn
+2025-02-11T12:34:17.212+06:00  INFO 23520 --- [order-service] [Thread-2] o.f.j.s.i.a.AcquireTimerJobsRunnable     : starting to acquire async jobs due for engine cmmn
+2025-02-11T12:34:17.213+06:00  INFO 23520 --- [order-service] [Thread-4] o.f.j.s.i.a.AcquireAsyncJobsDueRunnable  : starting to acquire async jobs due for engine bpmn
+2025-02-11T12:34:17.213+06:00  INFO 23520 --- [order-service] [Thread-5] o.f.j.s.i.a.AcquireTimerJobsRunnable     : starting to acquire async jobs due for engine bpmn
+2025-02-11T12:34:17.213+06:00  INFO 23520 --- [order-service] [Thread-6] o.f.j.s.i.a.ResetExpiredJobsRunnable     : starting to reset expired jobs for engine bpmn
+2025-02-11T12:34:17.213+06:00  INFO 23520 --- [order-service] [main] o.f.s.c.DefaultAutoDeploymentStrategy    : Deploying resources [file [D:\Projects\Code\spring-flowable-microservice-event-driven-example\order-service\target\classes\processes\order-saga.bpmn20.xml]] for engine org.flowable.engine.impl.ProcessEngineImpl@7c6557da deployment name hint SpringBootAutoDeployment
+2025-02-11T12:34:17.313+06:00  INFO 23520 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-11T12:34:17.338+06:00  INFO 23520 --- [order-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-saga-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = saga-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-02-11T12:34:17.371+06:00  INFO 23520 --- [order-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-02-11T12:34:17.471+06:00  INFO 23520 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-02-11T12:34:17.471+06:00  INFO 23520 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-02-11T12:34:17.471+06:00  INFO 23520 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1739255657471
+2025-02-11T12:34:17.471+06:00  INFO 23520 --- [order-service] [main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Subscribed to topic(s): saga-replies
+2025-02-11T12:34:17.471+06:00  INFO 23520 --- [order-service] [main] h.f.o.OrderServiceApplication            : Started OrderServiceApplication in 3.599 seconds (process running for 3.824)
+2025-02-11T12:34:17.730+06:00  WARN 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Error while fetching metadata with correlation id 2 : {saga-replies=LEADER_NOT_AVAILABLE}
+2025-02-11T12:34:17.730+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Cluster ID: XzrhhWtpQfK-3XwjysfkIg
+2025-02-11T12:34:18.485+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2025-02-11T12:34:18.489+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] (Re-)joining group
+2025-02-11T12:34:18.515+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Request joining group due to: need to re-join with the given member-id: consumer-saga-group-1-81418421-a078-4570-b89d-dd7d5a2dca0a
+2025-02-11T12:34:18.515+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] (Re-)joining group
+2025-02-11T12:34:18.532+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-saga-group-1-81418421-a078-4570-b89d-dd7d5a2dca0a', protocol='range'}
+2025-02-11T12:34:18.536+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Finished assignment for group at generation 1: {consumer-saga-group-1-81418421-a078-4570-b89d-dd7d5a2dca0a=Assignment(partitions=[saga-replies-0])}
+2025-02-11T12:34:18.601+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-saga-group-1-81418421-a078-4570-b89d-dd7d5a2dca0a', protocol='range'}
+2025-02-11T12:34:18.602+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Notifying assignor about the new Assignment(partitions=[saga-replies-0])
+2025-02-11T12:34:18.604+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Adding newly assigned partitions: saga-replies-0
+2025-02-11T12:34:18.614+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Found no committed offset for partition saga-replies-0
+2025-02-11T12:34:18.627+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Resetting offset for partition saga-replies-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1001 rack: null)], epoch=0}}.
+2025-02-11T12:34:18.627+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : saga-group: partitions assigned: [saga-replies-0]
+2025-02-11T12:38:54.742+06:00  INFO 23520 --- [order-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-11T12:38:54.747+06:00  INFO 23520 --- [order-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-11T12:38:54.752+06:00  INFO 23520 --- [order-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-02-11T12:38:54.817+06:00  INFO 23520 --- [order-service] [http-nio-8080-exec-1] h.f.o.Controller.OrderController         : Starting Order Saga for orderId = 12345
+2025-02-11T12:38:54.847+06:00  INFO 23520 --- [order-service] [http-nio-8080-exec-1] h.f.order_service.Service.KafkaProducer  : ************** Received a new order. Sending event to Kafka. OrderId: 12345, Message: {"orderId": "12345", "event": "ProcessPayment"} **************
+2025-02-11T12:38:54.874+06:00  INFO 23520 --- [order-service] [http-nio-8080-exec-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = order-service-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-02-11T12:38:54.874+06:00  INFO 23520 --- [order-service] [http-nio-8080-exec-1] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-02-11T12:38:54.897+06:00  INFO 23520 --- [order-service] [http-nio-8080-exec-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=order-service-producer-1] Instantiated an idempotent producer.
+2025-02-11T12:38:54.934+06:00  INFO 23520 --- [order-service] [http-nio-8080-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-02-11T12:38:54.934+06:00  INFO 23520 --- [order-service] [http-nio-8080-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-02-11T12:38:54.935+06:00  INFO 23520 --- [order-service] [http-nio-8080-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1739255934934
+2025-02-11T12:38:54.954+06:00  INFO 23520 --- [order-service] [kafka-producer-network-thread | order-service-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=order-service-producer-1] Cluster ID: XzrhhWtpQfK-3XwjysfkIg
+2025-02-11T12:38:54.960+06:00  INFO 23520 --- [order-service] [kafka-producer-network-thread | order-service-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=order-service-producer-1] ProducerId set to 0 with epoch 0
+2025-02-11T12:38:55.010+06:00  INFO 23520 --- [order-service] [http-nio-8080-exec-1] h.f.o.Controller.OrderController         : Order Saga started. processInstanceId = dd309a27-e842-11ef-b6fa-00155dc1d5fe
+2025-02-11T12:38:55.235+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : ************** Received message from Kafka. Message: {"orderId": "12345", "event": "Reserve Inventory"} **************
+2025-02-11T12:38:55.266+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : Correlating event. OrderId: 12345, EventId: Reserve Inventory, ProcessInstanceId: dd309a27-e842-11ef-b6fa-00155dc1d5fe
+2025-02-11T12:38:55.299+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Seeking to offset 0 for partition saga-replies-0
+2025-02-11T12:38:55.300+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Record in retry and not yet recovered
+2025-02-11T12:38:55.811+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : ************** Received message from Kafka. Message: {"orderId": "12345", "event": "Reserve Inventory"} **************
+2025-02-11T12:38:55.822+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : Correlating event. OrderId: 12345, EventId: Reserve Inventory, ProcessInstanceId: dd309a27-e842-11ef-b6fa-00155dc1d5fe
+2025-02-11T12:38:55.849+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Seeking to offset 0 for partition saga-replies-0
+2025-02-11T12:38:55.851+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Record in retry and not yet recovered
+2025-02-11T12:38:56.332+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : ************** Received message from Kafka. Message: {"orderId": "12345", "event": "Reserve Inventory"} **************
+2025-02-11T12:38:56.332+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : Correlating event. OrderId: 12345, EventId: Reserve Inventory, ProcessInstanceId: dd309a27-e842-11ef-b6fa-00155dc1d5fe
+2025-02-11T12:38:56.363+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Seeking to offset 0 for partition saga-replies-0
+2025-02-11T12:38:56.363+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Record in retry and not yet recovered
+2025-02-11T12:38:56.839+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : ************** Received message from Kafka. Message: {"orderId": "12345", "event": "Reserve Inventory"} **************
+2025-02-11T12:38:56.842+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : Correlating event. OrderId: 12345, EventId: Reserve Inventory, ProcessInstanceId: dd309a27-e842-11ef-b6fa-00155dc1d5fe
+2025-02-11T12:38:56.864+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Seeking to offset 0 for partition saga-replies-0
+2025-02-11T12:38:56.865+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Record in retry and not yet recovered
+2025-02-11T12:38:57.345+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : ************** Received message from Kafka. Message: {"orderId": "12345", "event": "Reserve Inventory"} **************
+2025-02-11T12:38:57.348+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : Correlating event. OrderId: 12345, EventId: Reserve Inventory, ProcessInstanceId: dd309a27-e842-11ef-b6fa-00155dc1d5fe
+2025-02-11T12:38:57.363+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Seeking to offset 0 for partition saga-replies-0
+2025-02-11T12:38:57.363+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Record in retry and not yet recovered
+2025-02-11T12:38:57.851+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : ************** Received message from Kafka. Message: {"orderId": "12345", "event": "Reserve Inventory"} **************
+2025-02-11T12:38:57.857+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : Correlating event. OrderId: 12345, EventId: Reserve Inventory, ProcessInstanceId: dd309a27-e842-11ef-b6fa-00155dc1d5fe
+2025-02-11T12:38:57.879+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Seeking to offset 0 for partition saga-replies-0
+2025-02-11T12:38:57.879+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Record in retry and not yet recovered
+2025-02-11T12:38:58.357+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : ************** Received message from Kafka. Message: {"orderId": "12345", "event": "Reserve Inventory"} **************
+2025-02-11T12:38:58.369+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : Correlating event. OrderId: 12345, EventId: Reserve Inventory, ProcessInstanceId: dd309a27-e842-11ef-b6fa-00155dc1d5fe
+2025-02-11T12:38:58.394+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Seeking to offset 0 for partition saga-replies-0
+2025-02-11T12:38:58.395+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Record in retry and not yet recovered
+2025-02-11T12:38:58.867+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : ************** Received message from Kafka. Message: {"orderId": "12345", "event": "Reserve Inventory"} **************
+2025-02-11T12:38:58.868+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : Correlating event. OrderId: 12345, EventId: Reserve Inventory, ProcessInstanceId: dd309a27-e842-11ef-b6fa-00155dc1d5fe
+2025-02-11T12:38:58.898+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Seeking to offset 0 for partition saga-replies-0
+2025-02-11T12:38:58.898+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Record in retry and not yet recovered
+2025-02-11T12:38:59.377+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : ************** Received message from Kafka. Message: {"orderId": "12345", "event": "Reserve Inventory"} **************
+2025-02-11T12:38:59.382+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : Correlating event. OrderId: 12345, EventId: Reserve Inventory, ProcessInstanceId: dd309a27-e842-11ef-b6fa-00155dc1d5fe
+2025-02-11T12:38:59.410+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Seeking to offset 0 for partition saga-replies-0
+2025-02-11T12:38:59.412+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Record in retry and not yet recovered
+2025-02-11T12:38:59.886+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : ************** Received message from Kafka. Message: {"orderId": "12345", "event": "Reserve Inventory"} **************
+2025-02-11T12:38:59.891+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] h.f.order_service.Service.KafkaConsumer  : Correlating event. OrderId: 12345, EventId: Reserve Inventory, ProcessInstanceId: dd309a27-e842-11ef-b6fa-00155dc1d5fe
+2025-02-11T12:38:59.906+06:00 ERROR 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.kafka.listener.DefaultErrorHandler   : Backoff FixedBackOff{interval=0, currentAttempts=10, maxAttempts=9} exhausted for saga-replies-0@0
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void halfbloodpro.flowable.order_service.Service.KafkaConsumer.listen(java.lang.String)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2989) ~[spring-kafka-3.3.2.jar:3.3.2]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2896) ~[spring-kafka-3.3.2.jar:3.3.2]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2860) ~[spring-kafka-3.3.2.jar:3.3.2]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2772) ~[spring-kafka-3.3.2.jar:3.3.2]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2609) ~[spring-kafka-3.3.2.jar:3.3.2]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2498) ~[spring-kafka-3.3.2.jar:3.3.2]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2149) ~[spring-kafka-3.3.2.jar:3.3.2]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1525) ~[spring-kafka-3.3.2.jar:3.3.2]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1463) ~[spring-kafka-3.3.2.jar:3.3.2]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1332) ~[spring-kafka-3.3.2.jar:3.3.2]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:489) ~[spring-kafka-3.3.2.jar:3.3.2]
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.2.jar:3.3.2]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:85) ~[spring-kafka-3.3.2.jar:3.3.2]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:50) ~[spring-kafka-3.3.2.jar:3.3.2]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2882) ~[spring-kafka-3.3.2.jar:3.3.2]
+Caused by: org.flowable.common.engine.api.FlowableException: Execution with id 'dd309a27-e842-11ef-b6fa-00155dc1d5fe' does not have a subscription to a message event with name 'Reserve Inventory'
+	at org.flowable.engine.impl.cmd.MessageEventReceivedCmd.execute(MessageEventReceivedCmd.java:82) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.cmd.MessageEventReceivedCmd.execute(MessageEventReceivedCmd.java:37) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.cmd.NeedsActiveExecutionCmd.execute(NeedsActiveExecutionCmd.java:55) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker$1.run(CommandInvoker.java:67) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:140) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:114) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:72) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.interceptor.BpmnOverrideContextInterceptor.execute(BpmnOverrideContextInterceptor.java:26) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:53) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:105) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.spring.SpringTransactionInterceptor.lambda$execute$0(SpringTransactionInterceptor.java:57) ~[flowable-spring-common-7.0.0.jar:7.0.0]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.2.2.jar:6.2.2]
+	at org.flowable.common.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:57) ~[flowable-spring-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:30) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:56) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.common.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:51) ~[flowable-engine-common-7.0.0.jar:7.0.0]
+	at org.flowable.engine.impl.RuntimeServiceImpl.messageEventReceived(RuntimeServiceImpl.java:697) ~[flowable-engine-7.0.0.jar:7.0.0]
+	at halfbloodpro.flowable.order_service.Service.KafkaConsumer.listen(KafkaConsumer.java:38) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.2.2.jar:6.2.2]
+	at org.springframework.kafka.listener.adapter.KotlinAwareInvocableHandlerMethod.doInvoke(KotlinAwareInvocableHandlerMethod.java:45) ~[spring-kafka-3.3.2.jar:3.3.2]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.2.2.jar:6.2.2]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:71) ~[spring-kafka-3.3.2.jar:3.3.2]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:474) ~[spring-kafka-3.3.2.jar:3.3.2]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.2.jar:3.3.2]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:85) ~[spring-kafka-3.3.2.jar:3.3.2]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:50) ~[spring-kafka-3.3.2.jar:3.3.2]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2882) ~[spring-kafka-3.3.2.jar:3.3.2]
+	... 10 common frames omitted
+
+2025-02-11T12:43:18.064+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Node -1 disconnected.
+2025-02-11T12:44:12.690+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Revoke previously assigned partitions saga-replies-0
+2025-02-11T12:44:12.692+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : saga-group: partitions revoked: [saga-replies-0]
+2025-02-11T12:44:12.692+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Member consumer-saga-group-1-81418421-a078-4570-b89d-dd7d5a2dca0a sending LeaveGroup request to coordinator localhost:9092 (id: 2147482646 rack: null) due to the consumer unsubscribed from all topics
+2025-02-11T12:44:12.693+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-02-11T12:44:12.693+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Request joining group due to: consumer pro-actively leaving the group
+2025-02-11T12:44:12.694+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Unsubscribed all topics or patterns and assigned partitions
+2025-02-11T12:44:12.696+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-02-11T12:44:12.696+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-saga-group-1, groupId=saga-group] Request joining group due to: consumer pro-actively leaving the group
+2025-02-11T12:44:13.211+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-02-11T12:44:13.211+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-02-11T12:44:13.211+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-02-11T12:44:13.211+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-02-11T12:44:13.218+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-saga-group-1 unregistered
+2025-02-11T12:44:13.219+06:00  INFO 23520 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : saga-group: Consumer stopped
+2025-02-11T12:44:13.220+06:00  INFO 23520 --- [order-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-11T12:44:13.227+06:00  INFO 23520 --- [order-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-11T12:44:13.232+06:00  INFO 23520 --- [order-service] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=order-service-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-02-11T12:44:13.235+06:00  INFO 23520 --- [order-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-02-11T12:44:13.235+06:00  INFO 23520 --- [order-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-02-11T12:44:13.236+06:00  INFO 23520 --- [order-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-02-11T12:44:13.236+06:00  INFO 23520 --- [order-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-02-11T12:44:13.237+06:00  INFO 23520 --- [order-service] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for order-service-producer-1 unregistered
+2025-02-11T12:44:13.240+06:00  INFO 23520 --- [order-service] [SpringApplicationShutdownHook] o.f.j.s.i.a.AbstractAsyncExecutor        : Shutting down the async job executor [org.flowable.spring.job.service.SpringAsyncExecutor] for engine cmmn
+2025-02-11T12:44:13.240+06:00  INFO 23520 --- [order-service] [flowable-cmmn-reset-expired-jobs] o.f.j.s.i.a.ResetExpiredJobsRunnable     : stopped resetting expired jobs for engine cmmn
+2025-02-11T12:44:13.240+06:00  INFO 23520 --- [order-service] [flowable-cmmn-acquire-timer-jobs] o.f.j.s.i.a.AcquireTimerJobsRunnable     : stopped async job due acquisition for engine cmmn
+2025-02-11T12:44:13.240+06:00  INFO 23520 --- [order-service] [flowable-cmmn-acquire-async-jobs] o.f.j.s.i.a.AcquireAsyncJobsDueRunnable  : stopped async job due acquisition for engine cmmn
+2025-02-11T12:44:13.243+06:00  INFO 23520 --- [order-service] [SpringApplicationShutdownHook] o.f.j.s.i.a.AbstractAsyncExecutor        : Shutting down the async job executor [org.flowable.spring.job.service.SpringAsyncExecutor] for engine bpmn
+2025-02-11T12:44:13.244+06:00  INFO 23520 --- [order-service] [flowable-bpmn-reset-expired-jobs] o.f.j.s.i.a.ResetExpiredJobsRunnable     : stopped resetting expired jobs for engine bpmn
+2025-02-11T12:44:13.244+06:00  INFO 23520 --- [order-service] [flowable-bpmn-acquire-async-jobs] o.f.j.s.i.a.AcquireAsyncJobsDueRunnable  : stopped async job due acquisition for engine bpmn
+2025-02-11T12:44:13.244+06:00  INFO 23520 --- [order-service] [flowable-bpmn-acquire-timer-jobs] o.f.j.s.i.a.AcquireTimerJobsRunnable     : stopped async job due acquisition for engine bpmn
+2025-02-11T12:44:13.246+06:00  INFO 23520 --- [order-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T12:44:13.246+06:00  INFO 23520 --- [order-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
