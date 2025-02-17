@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" 
              xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" 
              xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" 
@@ -9,58 +8,63 @@
         <startEvent id="startEvent" name="Start Workflow"/>
         <sequenceFlow id="flow1" sourceRef="startEvent" targetRef="sendCreateOrder"/>
         
+		<!-- From Start to Order to Inventory -->
         <serviceTask id="sendCreateOrder" name="Send CreateOrder Command" flowable:delegateExpression="${kafkaProducerService}"/>
         <sequenceFlow id="flow2" sourceRef="sendCreateOrder" targetRef="waitForCreateOrderResponse"/>
-        <intermediateCatchEvent id="waitForCreateOrderResponse" name="Wait for CreateOrder Response">
-            <messageEventDefinition messageRef="OrderInitiated"/>
-        </intermediateCatchEvent>
+		<intermediateCatchEvent id="waitForCreateOrderResponse" name="Wait for CreateOrder Response">
+			<messageEventDefinition messageRef="OrderInitiated"/>
+		</intermediateCatchEvent>
         <sequenceFlow id="flow3" sourceRef="waitForCreateOrderResponse" targetRef="sendReserveInventory"/>
         
+		<!-- From Inventory to Payment -->
         <serviceTask id="sendReserveInventory" name="Send ReserveInventory Command" flowable:delegateExpression="${kafkaProducerService}"/>
         <sequenceFlow id="flow4" sourceRef="sendReserveInventory" targetRef="waitForReserveInventoryResponse"/>
         <intermediateCatchEvent id="waitForReserveInventoryResponse" name="Wait for ReserveInventory Response">
             <messageEventDefinition messageRef="InventoryReserved"/>
         </intermediateCatchEvent>
-        <sequenceFlow id="flow5" sourceRef="waitForReserveInventoryResponse" targetRef="sendMakePayment"/>
+        <sequenceFlow id="flow6" sourceRef="waitForReserveInventoryResponse" targetRef="sendMakePayment"/>
         
-        <intermediateCatchEvent id="inventoryReservationFailed" name="Inventory Reservation Failed">
+        <!--<intermediateCatchEvent id="inventoryReservationFailed" name="Inventory Reservation Failed">
             <messageEventDefinition messageRef="InventoryReservationFailed"/>
         </intermediateCatchEvent>
-        <sequenceFlow id="flow6" sourceRef="inventoryReservationFailed" targetRef="endEvent"/>
+        <sequenceFlow id="flow7" sourceRef="inventoryReservationFailed" targetRef="endEvent"/>-->
         
+		<!-- From Payment to Shipment -->
         <serviceTask id="sendMakePayment" name="Send MakePayment Command" flowable:delegateExpression="${kafkaProducerService}"/>
-        <sequenceFlow id="flow7" sourceRef="sendMakePayment" targetRef="waitForMakePaymentResponse"/>
+        <sequenceFlow id="flow8" sourceRef="sendMakePayment" targetRef="waitForMakePaymentResponse"/>
         <intermediateCatchEvent id="waitForMakePaymentResponse" name="Wait for MakePayment Response">
             <messageEventDefinition messageRef="PaymentProcessed"/>
         </intermediateCatchEvent>
-        <sequenceFlow id="flow8" sourceRef="waitForMakePaymentResponse" targetRef="sendShipOrder"/>
+        <sequenceFlow id="flow10" sourceRef="waitForMakePaymentResponse" targetRef="sendShipOrder"/>
         
-        <intermediateCatchEvent id="paymentFailed" name="Payment Failed">
+        <!--<intermediateCatchEvent id="paymentFailed" name="Payment Failed">
             <messageEventDefinition messageRef="PaymentFailed"/>
         </intermediateCatchEvent>
-        <sequenceFlow id="flow9" sourceRef="paymentFailed" targetRef="sendInventoryCompensation"/>
+        <sequenceFlow id="flow11" sourceRef="paymentFailed" targetRef="sendInventoryCompensation"/>
         
         <serviceTask id="sendInventoryCompensation" name="Send Inventory Compensation" flowable:delegateExpression="${kafkaProducerService}"/>
-        <sequenceFlow id="flow10" sourceRef="sendInventoryCompensation" targetRef="endEvent"/>
+        <sequenceFlow id="flow12" sourceRef="sendInventoryCompensation" targetRef="endEvent"/>-->
         
+		<!-- From Shipment to End -->
         <serviceTask id="sendShipOrder" name="Send ShipOrder Command" flowable:delegateExpression="${kafkaProducerService}"/>
-        <sequenceFlow id="flow11" sourceRef="sendShipOrder" targetRef="waitForShipOrderResponse"/>
+        <sequenceFlow id="flow13" sourceRef="sendShipOrder" targetRef="waitForShipOrderResponse"/>
+        
         <intermediateCatchEvent id="waitForShipOrderResponse" name="Wait for ShipOrder Response">
             <messageEventDefinition messageRef="OrderShipped"/>
         </intermediateCatchEvent>
-        <sequenceFlow id="flow12" sourceRef="waitForShipOrderResponse" targetRef="endEvent"/>
+        <sequenceFlow id="flow15" sourceRef="waitForShipOrderResponse" targetRef="endEvent"/>
         
-        <intermediateCatchEvent id="orderShipmentFailed" name="Order Shipment Failed">
+        <!--<intermediateCatchEvent id="orderShipmentFailed" name="Order Shipment Failed">
             <messageEventDefinition messageRef="OrderShipmentFailed"/>
         </intermediateCatchEvent>
-        <sequenceFlow id="flow13" sourceRef="orderShipmentFailed" targetRef="sendPaymentCompensation"/>
+        <sequenceFlow id="flow16" sourceRef="orderShipmentFailed" targetRef="sendPaymentCompensation"/>
         
         <serviceTask id="sendPaymentCompensation" name="Send Payment Compensation" flowable:delegateExpression="${kafkaProducerService}"/>
-        <sequenceFlow id="flow14" sourceRef="sendPaymentCompensation" targetRef="endEvent"/>
+        <sequenceFlow id="flow17" sourceRef="sendPaymentCompensation" targetRef="endEvent"/>-->
         
         <endEvent id="endEvent" name="End Workflow"/>
     </process>
-    
+
     <message id="OrderInitiated" name="OrderInitiated"/>
     <message id="InventoryReserved" name="InventoryReserved"/>
     <message id="InventoryReservationFailed" name="InventoryReservationFailed"/>
