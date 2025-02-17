@@ -1,7 +1,7 @@
 package halfbloodpro.example.flowable_saga_orchestrator_engine.Service.Kafka;
 
 import org.flowable.engine.RuntimeService;
-import org.flowable.engine.runtime.ProcessInstance;
+import org.flowable.engine.runtime.Execution;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,18 +23,20 @@ public class Consumer {
         JSONObject json = new JSONObject(message);
         String orderId = json.getString("orderId");
         String event = json.getString("event");
+    
+        //Gets the relevant execution Id within the workflow instance needed to correlate the event
+        Execution execution = runtimeService.createExecutionQuery()
+                                            .messageEventSubscriptionName(event)
+                                            .singleResult();
 
-        ProcessInstance processInstance = runtimeService.createProcessInstanceQuery()
-                                                        .variableValueEquals("orderId", orderId)
-                                                        .singleResult();
-
-        if (processInstance == null)
+        if (execution != null)
         {
-            logger.warn("No active process found for orderId: {}", orderId);
-            return;
+            runtimeService.messageEventReceived(event, execution.getId());
+            logger.info("Successfully correlated an event. ExecutionId: {}, OrderId: {}, Message: {}", execution.getId(), orderId, event);
         }
-
-        logger.info("Successfully correlated an event. OrderId: {}, EventId: {}, ProcessInstanceId: {}", orderId, event, processInstance.getId());
-        runtimeService.messageEventReceived(event, processInstance.getId());
+        else
+        {
+            logger.error("No workflow instance found waiting for the event. OrderId: {}, Message: {}", orderId, event);
+        }
     }
 }
